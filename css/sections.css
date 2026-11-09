@@ -1,0 +1,616 @@
+/* ═══════════════════════════════════════════════════════════════
+   KALYANAM · sections.css — the ivory card suite
+   hero · story · save-the-date · events · palette · garland ·
+   venue · countdown · closing
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ═══ Ⅰ · THE CARD FRONT ═════════════════════════════════════ */
+.scene--hero { padding-top: clamp(180px, 24vh, 250px); }
+
+.hero-toran {
+  position: absolute;
+  top: clamp(58px, 8.5vh, 92px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(690px, 100vw);
+  opacity: .96;
+  pointer-events: none;
+  filter: drop-shadow(0 10px 14px color-mix(in srgb, var(--champagne-soft) 26%, transparent));
+}
+.hero-mandala {
+  position: absolute;
+  top: clamp(120px, 18vh, 220px);
+  right: max(-220px, -18vw);
+  width: clamp(420px, 46vw, 660px);
+  opacity: .1;
+  pointer-events: none;
+  animation: mandala-spin 140s linear infinite;
+}
+@keyframes mandala-spin { to { transform: rotate(360deg); } }
+
+.hero-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-invocation { margin-bottom: 8px; }
+.hero-invocation__art {
+  width: clamp(88px, 10vw, 126px);
+  filter: drop-shadow(0 8px 18px color-mix(in srgb, var(--champagne-soft) 38%, transparent));
+}
+.hero-shloka {
+  font-family: var(--font-deva);
+  font-size: clamp(1.06rem, 2vw, 1.34rem);
+  color: var(--champagne-soft);
+  letter-spacing: .1em;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hero-shloka__caps { font-size: 10px; letter-spacing: .42em; color: var(--charcoal); }
+
+.hero-eyebrow { margin-top: clamp(22px, 4vh, 40px); }
+.hero-names {
+  margin-top: 10px;
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-size: clamp(3rem, 9vw, 6.1rem);
+  line-height: 1.04;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 .18em;
+  color: var(--ink);
+  outline: none;
+}
+.hero-amp {
+  font-size: .82em;
+  color: var(--crimson);
+  transform: translateY(.04em);
+}
+
+.hero-lead {
+  margin-top: clamp(18px, 3.4vh, 30px);
+  max-width: 54ch;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.08rem, 1.9vw, 1.3rem);
+  line-height: 1.72;
+  color: var(--ink-soft);
+}
+.hero-divider { width: min(320px, 74vw); color: var(--champagne-soft); margin-top: clamp(20px, 3.4vh, 32px); }
+.hero-words {
+  margin-top: clamp(16px, 2.8vh, 26px);
+  font-family: var(--font-caps);
+  font-size: clamp(.98rem, 1.8vw, 1.22rem);
+  letter-spacing: .16em;
+  color: var(--burgundy-deep);
+}
+.hero-venue { margin-top: 12px; color: var(--charcoal); display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 10px; }
+
+/* the couple beneath their arch */
+.hero-couple {
+  position: relative;
+  margin-top: clamp(26px, 5vh, 48px);
+  display: grid;
+  place-items: end center;
+  width: clamp(240px, 28vw, 330px);
+  aspect-ratio: 5 / 6;
+}
+.hero-couple__arch {
+  position: absolute;
+  inset: 0 0 auto;
+  width: 100%;
+  color: var(--champagne-soft);
+  opacity: .9;
+  filter: drop-shadow(0 4px 10px color-mix(in srgb, var(--champagne-soft) 24%, transparent));
+}
+.hero-couple__art {
+  position: relative;
+  width: 41%;
+  filter: drop-shadow(0 16px 24px color-mix(in srgb, var(--ink) 22%, transparent));
+}
+
+.hero-scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: clamp(26px, 4.6vh, 44px);
+  text-decoration: none;
+  color: var(--champagne-soft);
+  opacity: .85;
+}
+.hero-scroll__line { width: 1px; height: 44px; background: linear-gradient(180deg, transparent, var(--gold-line)); }
+.hero-scroll__bud { width: 22px; animation: bud-sway 3.2s ease-in-out infinite alternate; transform-origin: top center; }
+@keyframes bud-sway { from { transform: rotate(-6deg); } to { transform: rotate(6deg); } }
+
+
+/* ── the jaali wash: a whisper of lattice over the paper grounds ──
+   Low opacity by design — invisible at a glance, present if you look. */
+.scene--story::after, .scene--details::after, .scene--venue::after, .scene--rsvp::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'%3E%3Cg fill='none' stroke='%2396702A' stroke-width='1'%3E%3Cpath d='M22 8 C 28 14 28 22 22 26 C 16 22 16 14 22 8 Z'/%3E%3Cpath d='M66 8 C 72 14 72 22 66 26 C 60 22 60 14 66 8 Z'/%3E%3Cpath d='M44 30 C 50 36 50 44 44 48 C 38 44 38 36 44 30 Z'/%3E%3Cpath d='M22 52 C 28 58 28 66 22 70 C 16 66 16 58 22 52 Z'/%3E%3Cpath d='M66 52 C 72 58 72 66 66 70 C 60 66 60 58 66 52 Z'/%3E%3Cpath d='M0 44 Q 6 42 10 44 M78 44 Q 82 42 88 44 M30 0 Q 32 4 30 8 M58 0 Q 56 4 58 8 M30 80 Q 32 84 30 88 M58 80 Q 56 84 58 88'/%3E%3C/g%3E%3Ccircle cx='22' cy='17' r='1.1' fill='%2396702A'/%3E%3Ccircle cx='66' cy='17' r='1.1' fill='%2396702A'/%3E%3Ccircle cx='44' cy='39' r='1.1' fill='%2396702A'/%3E%3Ccircle cx='22' cy='61' r='1.1' fill='%2396702A'/%3E%3Ccircle cx='66' cy='61' r='1.1' fill='%2396702A'/%3E%3C/svg%3E") 0 0 / 88px 88px repeat;
+  opacity: .1;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* ═══ Ⅱ · THEIR STORY — the family album page ═══════════════ */
+.scene--story::before {
+  content: '';
+  position: absolute;
+  top: -140px; right: -160px;
+  width: 560px; height: 560px;
+  background: url('../assets/art/mandala.png') center / contain no-repeat;
+  opacity: .07;
+  pointer-events: none;
+}
+.story-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(36px, 6vw, 84px);
+  align-items: start;
+}
+.story-copy .kicker { color: var(--burgundy); }
+.story-copy .display em { color: var(--burgundy); }
+.story-copy .prose { margin-top: 22px; color: var(--ink); }
+.story-copy .prose--dropcap::first-letter { color: var(--burgundy); }
+
+.story-note {
+  margin-top: 26px;
+  font-size: 1.24rem;
+  color: var(--ink-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transform: rotate(-1.4deg);
+}
+.story-note-credit { font-size: .98rem; opacity: .75; }
+
+.story-peacock {
+  width: clamp(130px, 15vw, 200px);
+  margin: 22px 0 0 auto;
+  filter: drop-shadow(0 14px 20px color-mix(in srgb, var(--ink) 16%, transparent));
+}
+
+/* the keepsake folio */
+.story-aside { position: relative; display: flex; flex-direction: column; gap: 26px; }
+.story-quote {
+  position: relative;
+  background: var(--paper-raised);
+  border: 1px solid var(--paper-line);
+  outline: 1px solid color-mix(in srgb, var(--champagne-soft) 40%, transparent);
+  outline-offset: 5px;
+  border-radius: var(--radius-card);
+  padding: 40px 34px 32px;
+  box-shadow: var(--shadow-card);
+}
+.story-quote__mark {
+  font-size: 4.4rem;
+  line-height: .4;
+  display: block;
+  color: var(--champagne-soft);
+  margin-bottom: 14px;
+}
+.story-quote__text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2vw, 1.55rem);
+  line-height: 1.5;
+  color: var(--ink);
+}
+.story-quote__label { margin-top: 16px; color: var(--ink-soft); letter-spacing: .2em; font-size: 10px; }
+
+.story-aside-note { text-align: right; font-size: 1.7rem; color: var(--burgundy); opacity: .85; }
+.story-captions { display: flex; flex-direction: column; gap: 12px; }
+.story-caption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.02rem;
+  color: var(--ink-soft);
+}
+.story-caption svg { width: 58px; color: var(--champagne-soft); flex: none; }
+
+/* ═══ Ⅲ · SAVE THE DATE — the shagun plate ══════════════════ */
+.scene--std {
+  text-align: center;
+  background:
+    radial-gradient(120% 80% at 50% 0%, var(--cream-deep) 30%, color-mix(in srgb, var(--parchment) 46%, var(--ivory)) 100%);
+}
+.std-glow {
+  position: absolute;
+  left: 50%; top: 42%;
+  width: min(680px, 110vw);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--champagne) 13%, transparent) 0%, transparent 62%);
+  pointer-events: none;
+}
+.std-plate {
+  position: relative;
+  background: var(--paper-raised);
+  border: 1px solid color-mix(in srgb, var(--champagne-soft) 70%, transparent);
+  outline: 1px solid color-mix(in srgb, var(--champagne-soft) 44%, transparent);
+  outline-offset: 7px;
+  border-radius: var(--radius-card);
+  padding: clamp(44px, 6vw, 72px) clamp(26px, 5vw, 64px);
+  box-shadow: var(--shadow-card);
+  color: var(--ink);
+}
+.std-emblem { width: 62px; margin: 0 auto 16px; color: var(--champagne-soft); }
+.std-title { font-family: var(--font-editorial); font-weight: 400; font-size: clamp(2rem, 4vw, 2.8rem); color: var(--ink); }
+.std-crossing { font-size: clamp(1.5rem, 2.6vw, 1.9rem); color: var(--burgundy); margin-top: 2px; }
+.std-numerals { font-size: clamp(2.7rem, 6vw, 4rem); line-height: 1.1; margin-top: 18px; }
+.std-display {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.02rem, 1.7vw, 1.18rem);
+  color: var(--ink-soft);
+  margin-top: 10px;
+}
+.std-note { margin-top: 14px; font-size: 13.5px; letter-spacing: .05em; color: var(--charcoal); }
+.std-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+
+.std-seal {
+  position: relative;
+  width: 116px;
+  aspect-ratio: 1;
+  margin: 34px auto 0;
+  display: grid;
+  place-items: center;
+  filter: drop-shadow(0 10px 16px color-mix(in srgb, var(--champagne-soft) 42%, transparent));
+}
+.std-seal .seal__art { position: absolute; inset: 0; }
+.seal__initials { position: relative; font-size: 1.7rem; color: #57350a; text-shadow: 0 1px 0 rgba(255, 244, 200, .5); }
+
+/* ═══ Ⅳ · THE CELEBRATIONS — one gold, clean line marks ═════ */
+.scene--details .details-head { text-align: center; }
+.scene--details .kicker { color: var(--burgundy); }
+.scene--details .display em { color: var(--burgundy); }
+.details-intro {
+  margin-top: 12px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+}
+
+.programme {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(24px, 3.2vw, 40px);
+  margin-top: clamp(44px, 6vh, 68px);
+}
+.programme-item {
+  position: relative;
+  background: var(--paper-raised);
+  border: 1px solid var(--paper-line);
+  border-radius: 150px 150px var(--radius-card) var(--radius-card);
+  padding: 44px 32px 38px;
+  text-align: center;
+  box-shadow: 0 2px 5px color-mix(in srgb, var(--ink) 5%, transparent), 0 20px 38px -20px color-mix(in srgb, var(--ink) 22%, transparent);
+  overflow: hidden;
+  transition: transform .45s var(--ease-out), box-shadow .45s var(--ease-out);
+}
+.programme-item:hover { transform: translateY(-5px); box-shadow: 0 4px 8px color-mix(in srgb, var(--ink) 7%, transparent), 0 28px 46px -20px color-mix(in srgb, var(--ink) 28%, transparent); }
+
+/* one quiet gold wash above every card — a single colour, always */
+.programme-item::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 148px;
+  border-radius: inherit;
+  background: linear-gradient(180deg, var(--champagne-soft) 0%, transparent 100%);
+  opacity: .08;
+  pointer-events: none;
+}
+.programme-item::after {
+  content: '';
+  position: absolute;
+  inset: 6px 6px auto;
+  height: 140px;
+  border-radius: 145px 145px 0 0;
+  border: 1px solid color-mix(in srgb, var(--champagne-soft) 48%, transparent);
+  border-bottom: 0;
+  opacity: .6;
+  pointer-events: none;
+}
+
+.programme-index {
+  position: absolute;
+  top: 18px; left: 22px;
+  font-family: var(--font-editorial);
+  font-size: .95rem;
+  color: var(--champagne-soft);
+}
+/* the mark — one minimalist line icon, one gold */
+.programme-orn {
+  position: relative;
+  width: 56px; height: 56px;
+  margin: 8px auto 22px;
+  color: var(--champagne-soft);
+}
+.programme-item h3 {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-size: 1.28rem;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.programme-value {
+  margin-top: 12px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--burgundy);
+}
+.programme-note {
+  margin-top: 14px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: .99rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  padding-inline: 4px;
+}
+
+.details-orn { width: min(320px, 70vw); margin: clamp(44px, 6vh, 64px) auto 0; color: var(--champagne-soft); }
+
+.particulars {
+  margin-top: clamp(44px, 6vh, 64px);
+  padding-top: clamp(30px, 4vh, 44px);
+  border-top: 1px solid var(--paper-line);
+  text-align: center;
+}
+.particulars-eyebrow { color: var(--burgundy); letter-spacing: .4em; }
+.particulars-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(18px, 3vw, 34px);
+  margin-top: 26px;
+}
+.particular-label { color: var(--champagne-soft); font-size: 10px; }
+.particular-value {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+.particular-note {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: .92rem;
+  color: var(--charcoal);
+}
+
+/* ═══ Ⅴ · THE COLOURS OF THE DAY ═════════════════════════════ */
+.scene--palette { text-align: center; }
+.palette-intro { margin: 14px auto 0; color: var(--ink-soft); }
+.palette-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(20px, 3.4vw, 38px);
+  margin-top: clamp(34px, 5vh, 52px);
+}
+.palette-swatches li { display: grid; justify-items: center; gap: 12px; }
+.swatch {
+  width: clamp(56px, 6.4vw, 74px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid color-mix(in srgb, var(--champagne) 66%, transparent);
+  box-shadow:
+    inset 0 0 0 4px color-mix(in srgb, var(--paper-raised) 82%, transparent),
+    inset 0 10px 14px rgba(255, 255, 255, .2),
+    inset 0 -10px 16px rgba(82, 48, 12, .12),
+    0 10px 20px -8px color-mix(in srgb, var(--ink) 26%, transparent);
+}
+.swatch-name { font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: var(--ink-soft); }
+
+.dresscode {
+  position: relative;
+  margin: clamp(44px, 6vh, 64px) auto 0;
+  max-width: 560px;
+  background: var(--paper-raised);
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius-card);
+  padding: 34px clamp(24px, 4vw, 48px) 30px;
+  color: var(--ink);
+  box-shadow: var(--shadow-card);
+  display: grid;
+  justify-items: center;
+}
+.dresscode-lotus { width: 92px; margin-bottom: 8px; }
+.dresscode-label { color: var(--champagne-soft); font-size: 10px; }
+.dresscode-title { margin-top: 8px; font-family: var(--font-editorial); font-size: 1.5rem; }
+.dresscode-note { margin-top: 8px; font-family: var(--font-display); font-style: italic; font-size: 1rem; color: var(--ink-soft); }
+
+/* ═══ Ⅵ · THE FESTIVITIES — the jasmine garland ══════════════ */
+.scene--itinerary { text-align: center; }
+.day-words {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(22px, 3.6vw, 44px);
+  margin-top: clamp(44px, 6.6vh, 68px);
+  position: relative;
+  padding-top: 40px;
+}
+/* the garland — one gold rope with a bead, strung over the scene */
+.day-words::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 2%; right: 2%;
+  height: 26px;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='26'%3E%3Cpath d='M0 14 Q 23 22 46 14' fill='none' stroke='%2396702A' stroke-opacity='.55' stroke-width='1.2'/%3E%3Ccircle cx='23' cy='16.5' r='2.4' fill='none' stroke='%2396702A' stroke-opacity='.8' stroke-width='1.3'/%3E%3C/svg%3E") 0 0 / 46px 26px repeat-x;
+  filter: drop-shadow(0 3px 4px color-mix(in srgb, var(--champagne-soft) 26%, transparent));
+}
+.day-word {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  position: relative;
+}
+/* the string hanging from the garland */
+.day-word::before {
+  content: '';
+  position: absolute;
+  top: -34px; left: 50%;
+  width: 1.5px; height: 34px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--champagne) 62%, transparent), var(--gold-line));
+}
+/* the bloom — a single gold line flower on its string */
+.day-word__bulb {
+  width: clamp(42px, 4.3vw, 54px);
+  aspect-ratio: 1;
+  color: var(--champagne-soft);
+  animation: bloom-sway 3.6s ease-in-out var(--sway-delay, 0s) infinite alternate;
+  transform-origin: top center;
+}
+.day-word__bulb svg { width: 100%; height: 100%; }
+.day-word:nth-child(odd) .day-word__bulb { --sway-delay: -1.8s; }
+@keyframes bloom-sway { from { transform: rotate(-3.5deg); } to { transform: rotate(3.5deg); } }
+.day-word__text {
+  font-family: var(--font-caps);
+  font-size: clamp(.92rem, 1.5vw, 1.1rem);
+  letter-spacing: .18em;
+  color: var(--burgundy-deep);
+}
+
+/* ═══ Ⅶ · THE MANDAPAM — venue & location ════════════════════ */
+.scene--venue { text-align: center; }
+.scene--venue .kicker { color: var(--burgundy); }
+.venue-title {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.2;
+  color: var(--ink);
+  max-width: 22ch;
+  margin: 10px auto 0;
+}
+.venue-swag { width: min(380px, 82vw); margin: 20px auto 0; color: var(--champagne-soft); }
+.venue-mandap {
+  width: clamp(240px, 30vw, 380px);
+  margin: clamp(20px, 4vh, 36px) auto 0;
+  filter: sepia(.08) saturate(1.05) drop-shadow(0 20px 28px color-mix(in srgb, var(--ink) 20%, transparent));
+}
+.venue-description { margin: clamp(20px, 3.6vh, 32px) auto 0; color: var(--ink); }
+.venue-diya { width: clamp(120px, 15vw, 180px); margin: 20px auto 0; }
+.venue-sublines { margin-top: 20px; display: grid; gap: 8px; }
+.venue-sublines .sub { font-family: var(--font-display); font-size: 1.05rem; color: var(--ink-soft); }
+.venue-sublines .sub .label-caps { color: var(--burgundy); margin-right: 8px; }
+.venue-address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+  font-size: 13.5px;
+  letter-spacing: .08em;
+  color: var(--ink-soft);
+}
+.venue-address .icon { color: var(--burgundy); }
+.venue-actions { display: flex; justify-content: center; margin-top: 26px; }
+
+/* ═══ Ⅷ · THE COUNTDOWN — beneath the golden mandala ════════ */
+.scene--countdown {
+  text-align: center;
+  background:
+    radial-gradient(120% 80% at 50% 0%, var(--cream-deep) 30%, color-mix(in srgb, var(--parchment) 46%, var(--ivory)) 100%);
+}
+.countdown-wreath {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: min(680px, 120vw);
+  transform: translate(-50%, -50%);
+  opacity: .13;
+  pointer-events: none;
+  animation: mandala-spin 180s linear infinite reverse;
+}
+.count-script {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 4vw, 2.9rem);
+  line-height: 1.25;
+  color: var(--ink);
+}
+.count-script em { color: var(--burgundy); }
+.count-clock {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(34px, 5vh, 52px);
+}
+.count-unit {
+  display: grid;
+  gap: 10px;
+  padding: 6px clamp(16px, 3vw, 38px);
+  position: relative;
+}
+.count-unit + .count-unit::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 12%;
+  height: 76%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, var(--gold-line), transparent);
+}
+.count-num { font-size: clamp(2.5rem, 6.4vw, 4.4rem); line-height: 1; }
+.count-label { color: var(--charcoal); font-size: 10px; }
+.count-summary { margin-top: 22px; font-family: var(--font-display); font-style: italic; color: var(--ink-soft); }
+.count-message { margin-top: 22px; font-family: var(--font-display); font-style: italic; font-size: 1.2rem; color: var(--burgundy); }
+.count-date { margin-top: 18px; color: var(--charcoal); font-size: 10.5px; }
+.count-date__zone { opacity: .8; }
+
+/* ═══ Ⅹ · THE CLOSING ════════════════════════════════════════ */
+.scene--closing {
+  text-align: center;
+  background:
+    radial-gradient(120% 80% at 50% 0%, var(--cream-deep) 30%, color-mix(in srgb, var(--parchment) 46%, var(--ivory)) 100%);
+}
+.closing-garland {
+  width: clamp(250px, 38vw, 430px);
+  margin: 0 auto clamp(16px, 3vh, 30px);
+  filter: drop-shadow(0 14px 20px color-mix(in srgb, var(--champagne-soft) 30%, transparent));
+}
+.closing-script { font-size: clamp(1.6rem, 3vw, 2.1rem); color: var(--champagne-soft); }
+.closing-names { font-size: clamp(3rem, 7.4vw, 5.2rem); color: var(--burgundy-deep); line-height: 1.15; }
+.closing-date { margin-top: 14px; font-size: 12px; letter-spacing: .2em; color: var(--charcoal); }
+.closing-message {
+  margin: 22px auto 0;
+  max-width: 52ch;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+.closing-seal {
+  position: relative;
+  width: 112px;
+  aspect-ratio: 1;
+  margin: 32px auto 0;
+  display: grid;
+  place-items: center;
+  filter: drop-shadow(0 10px 18px color-mix(in srgb, var(--champagne-soft) 45%, transparent));
+}
+.closing-seal .seal__art { position: absolute; inset: 0; }
+.closing-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-top: 34px; }

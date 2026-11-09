@@ -1,0 +1,79 @@
+/* ═══════════════════════════════════════════════════════════════
+   KALYANAM · variables.css — the ivory kalyana card
+   ---------------------------------------------------------------
+   Warm ivory-cream paper grounds, antique gold line-work, kumkum
+   and rani accents — the language of the South Indian wedding
+   card. Every token here is overwritten at runtime by main.js
+   applyTheme() from the editor's palettes, so the four moods
+   (marigold, rani, peacock, sindoor) recolour the whole suite.
+   These defaults mirror the marigold preset.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── the kalyana palette (marigold mood) ──────────────────── */
+  --burgundy:      #A63A46;   /* kumkum red — primary accent    */
+  --burgundy-deep: #822D39;   /* pressed kumkum                 */
+  --wine:          #521A24;   /* deepest maroon — strong ink    */
+  --crimson:       #C4406E;   /* rani pink — haldi-fire accent  */
+  --champagne:     #B8862B;   /* metallic gold                  */
+  --champagne-soft:#96702A;   /* antique gold                   */
+  --parchment:     #FBF5E6;   /* warm light wash                */
+  --ivory:         #F8F1E0;   /* card ivory cream               */
+  --paper-raised:  #FFFBEF;   /* raised card paper              */
+  --night:         #43131C;   /* deep kumkum ground (menu/nav)  */
+  --night-deep:    #33101A;
+  --olive:         #4E6B4A;   /* banana-leaf green              */
+  --olive-deep:    #39513A;
+  --sage:          #8CA48B;
+  --rose:          #C97A94;   /* dusty rose                     */
+  --ink:           #40261A;   /* warm sepia ink on cream        */
+  --ink-soft:      #6E4A38;
+  --charcoal:      #96796A;
+
+  /* ── derived golds ────────────────────────────────────────── */
+  --gold:          var(--champagne);
+  --gold-bright:   color-mix(in srgb, var(--champagne) 72%, #E9C868);
+  --gold-dim:      color-mix(in srgb, var(--champagne) 58%, var(--ink) 14%);
+  --gold-line:     color-mix(in srgb, var(--champagne) 52%, transparent);
+  --gold-faint:    color-mix(in srgb, var(--champagne) 26%, transparent);
+  --gold-ghost:    color-mix(in srgb, var(--champagne) 13%, transparent);
+
+  /* ── paper tones ──────────────────────────────────────────── */
+  --paper-line:    color-mix(in srgb, var(--champagne-soft) 56%, transparent);
+  --paper-wash:    color-mix(in srgb, var(--burgundy) 4%, var(--paper-raised));
+  --cream-deep:    color-mix(in srgb, var(--parchment) 62%, var(--ivory) 38%);
+
+  /* ── type ─────────────────────────────────────────────────── */
+  --font-editorial: 'Prata', serif;              /* display headings   */
+  --font-display:   'Cormorant Garamond', serif; /* romantic serif     */
+  --font-script:    'Great Vibes', cursive;      /* signatures         */
+  --font-hand:      'Shadows Into Light', cursive;
+  --font-body:      'Jost', sans-serif;          /* interface          */
+  --font-deva:      'Tiro Devanagari Hindi', serif;
+  --font-caps:      'Marcellus SC', 'Marcellus', serif;
+
+  /* ── rhythm ───────────────────────────────────────────────── */
+  --container:     1120px;
+  --gutter:        clamp(20px, 4.5vw, 48px);
+  --space-scene:   clamp(88px, 13vh, 156px);
+
+  --radius-card:   4px;
+  --shadow-card:   0 2px 6px rgba(82, 48, 12, .14), 0 22px 44px -18px rgba(82, 48, 12, .30);
+  --shadow-gold:   0 1px 0 rgba(255, 248, 224, .6) inset;
+
+  --ease-out:      cubic-bezier(.22, .61, .36, 1);
+}
+
+/* ── one paper system for every scene ───────────────────────────
+   The whole suite reads as a single ivory card, like the reference
+   invitations: alternating washes keep the rhythm without ever
+   breaking the paper.                                            */
+.scene {
+  --scene-bg: var(--ivory);
+  --scene-bg-deep: var(--cream-deep);
+  --scene-ink: var(--ink);
+  --scene-ink-soft: var(--ink-soft);
+  --scene-accent: var(--burgundy);
+  --scene-accent-soft: color-mix(in srgb, var(--burgundy) 68%, transparent);
+  --scene-gold: var(--champagne-soft);
+}
