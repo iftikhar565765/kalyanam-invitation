@@ -21,13 +21,13 @@ async def main():
 
         frame = pc.frames[-1]  # the preview iframe
         await frame.wait_for_selector("#invitation-title", timeout=10000)
-        names = await frame.eval_on_selector(".hero-names", 'el => el.textContent.trim().replace(/\\s+/g," ")')
+        names = await frame.eval_on_selector(".kcard-names", 'el => el.textContent.trim().replace(/\\s+/g," ")')
         print("preview names:", names)
 
         # live edit propagates into the iframe
         await pc.fill("#f-couple-partnerOne", "Karthik")
         await pc.wait_for_timeout(1400)
-        names2 = await frame.eval_on_selector(".hero-names", 'el => el.textContent.trim().replace(/\\s+/g," ")')
+        names2 = await frame.eval_on_selector(".kcard-names", 'el => el.textContent.trim().replace(/\\s+/g," ")')
         print("after live edit:", names2)
         await pc.fill("#f-couple-partnerOne", "Arjun")   # restore sample
         await pc.wait_for_timeout(600)
@@ -58,7 +58,7 @@ async def main():
         if n:
             await cards.nth(1).click()   # rani
             await pc.wait_for_timeout(1400)
-            ink = await frame.evaluate("getComputedStyle(document.querySelector('.hero-names')).color")
+            ink = await frame.evaluate("getComputedStyle(document.querySelector('.kcard-names')).color")
             bg = await frame.evaluate("getComputedStyle(document.body).backgroundColor")
             print("rani theme -> hero color:", ink, "| body bg:", bg)
             await cards.nth(0).click()   # back to marigold

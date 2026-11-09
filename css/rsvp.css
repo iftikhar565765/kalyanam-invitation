@@ -1,221 +1,179 @@
 /* ═══════════════════════════════════════════════════════════════
-   KALYANAM · rsvp.css — the reply card
-   ---------------------------------------------------------------
-   A small raised card on the sheet, like the reply card that
-   ships inside a printed invitation suite. Hairline gold rules,
-   no boxy web inputs.
+   KALYANAM · rsvp.css — the reply-card form
+   Stamp-block fields on the reply card: thick ink borders,
+   marigold focus shadows, chunky choice pills.
    ═══════════════════════════════════════════════════════════════ */
 
-.scene--rsvp { overflow: visible; }
-
-.watermark-script {
-  position: absolute;
-  left: 50%;
-  top: 44%;
-  transform: translate(-50%, -50%) rotate(-7deg);
-  font-family: var(--font-script);
-  font-size: clamp(3.4rem, 10vw, 5.6rem);
-  white-space: nowrap;
-  color: color-mix(in srgb, var(--rose) 26%, transparent);
-  z-index: 1;
-  pointer-events: none;
-  user-select: none;
+.rsvp-form {
+  margin-top: 30px;
+  text-align: left;
+  display: grid;
+  gap: 22px;
 }
 
-.scene--rsvp .scene-body { z-index: 3; }
-
-.rsvp-card {
-  max-width: 540px;
-  margin-inline: auto;
-  padding: clamp(26px, 5vw, 44px) clamp(22px, 5vw, 42px) clamp(28px, 5vw, 42px);
-  background:
-    linear-gradient(180deg,
-      color-mix(in srgb, var(--parchment) 88%, transparent) 0%,
-      color-mix(in srgb, var(--paper-raised) 94%, transparent) 100%);
-  border: 1px solid var(--gold-faint);
-  border-radius: 8px;
-  box-shadow:
-    0 1px 0 rgba(255, 252, 240, .7) inset,
-    0 12px 26px -14px rgba(93, 52, 22, .22);
-  text-align: center;
-}
-
-.rsvp-title {
-  font-family: var(--font-editorial);
-  font-weight: 500;
-  font-size: clamp(1.7rem, 5vw, 2.15rem);
-  color: var(--burgundy);
-  margin-top: 10px;
-}
-
-.rsvp-deadline {
-  margin-top: 12px;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1rem;
-  color: var(--ink-soft);
-}
-
-.rsvp-ornament { margin-top: 16px; }
-.rsvp-ornament svg { width: min(280px, 92%); }
-
-.rsvp-form { margin-top: 26px; text-align: left; }
-
-.field { margin-top: 20px; }
-.field:first-child { margin-top: 0; }
-
-.field > label,
+.field label,
 .field-legend {
   display: block;
   font-family: var(--font-ui);
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .18em;
-  font-size: .62rem;
-  color: var(--champagne-soft);
-  margin-bottom: 7px;
+  font-size: .66rem;
+  color: var(--ink-soft);
+  margin-bottom: 9px;
 }
 
 .field input[type="text"],
 .field input[type="number"],
 .field textarea {
   width: 100%;
-  border: 0;
-  border-bottom: 1px solid var(--gold-line);
-  background: transparent;
-  padding: 7px 2px;
-  font-family: var(--font-display);
-  font-size: 1.06rem;
-  color: var(--ink);
-  border-radius: 0;
-  transition: border-color .3s;
-}
-.field input::placeholder,
-.field textarea::placeholder {
-  color: color-mix(in srgb, var(--charcoal) 78%, transparent);
-  font-style: italic;
-}
-.field input:focus,
-.field textarea:focus {
-  outline: none;
-  border-bottom-color: var(--champagne);
-}
-.field textarea { resize: vertical; min-height: 44px; }
-
-.field--split input[type="number"] { max-width: 110px; }
-
-.field-legend { margin-bottom: 10px; }
-
-.choices {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 30px;
-}
-.choice {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-.choice input {
-  position: absolute;
-  opacity: 0;
-  width: 1px;
-  height: 1px;
-}
-.choice .diamond {
-  width: 12px;
-  height: 12px;
-  transform: rotate(45deg);
-  border: 1.4px solid var(--champagne);
-  background: transparent;
-  transition: background-color .25s, box-shadow .25s;
-  flex: none;
-}
-.choice input:checked + .diamond {
-  background: var(--burgundy);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--champagne) 22%, transparent);
-}
-.choice input:focus-visible + .diamond {
-  outline: 2px solid var(--champagne);
-  outline-offset: 3px;
-}
-.choice .text {
   font-family: var(--font-display);
   font-size: 1.04rem;
   color: var(--ink);
+  background: var(--ivory);
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  padding: .78em .95em;
+  transition: transform .16s var(--ease-out), box-shadow .16s var(--ease-out);
+  appearance: none;
+}
+.field textarea { resize: vertical; min-height: 64px; }
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--champagne);
 }
 
 .field-error {
   margin-top: 8px;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: .88rem;
-  color: var(--crimson);
+  font-family: var(--font-ui);
+  font-size: .76rem;
+  line-height: 1.5;
+  color: var(--burgundy);
 }
 
-.rsvp-honeypot {
-  position: absolute !important;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
+.field--split input[type="number"] { max-width: 160px; }
+
+/* ── the two choices — chunky pills ───────────────────────────── */
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
+
+.choice {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  padding: .72em 1.15em;
+  background: var(--ivory);
+  border: 2px solid var(--ink);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform .16s var(--ease-out), box-shadow .16s var(--ease-out),
+    background-color .16s var(--ease-out);
+}
+.choice:hover { transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--ink); }
+
+.choice input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.choice .diamond {
+  width: 13px;
+  height: 13px;
+  flex: none;
+  transform: rotate(45deg);
+  border: 2px solid var(--ink);
+  background: transparent;
+  transition: background-color .16s var(--ease-out);
+}
+
+.choice:has(input:checked) {
+  background: var(--champagne);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.choice:has(input:checked) .diamond { background: var(--burgundy); }
+.choice:has(input:focus-visible) {
+  outline: 3px solid var(--champagne);
+  outline-offset: 2px;
+}
+
+/* ── submit & friends ─────────────────────────────────────────── */
 
 .rsvp-actions {
-  margin-top: 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  margin-top: 6px;
+  text-align: center;
 }
 
 .rsvp-note {
-  font-size: .8rem;
+  font-family: var(--font-ui);
+  font-size: .78rem;
   line-height: 1.6;
-  color: var(--charcoal);
-  max-width: 44ch;
+  color: var(--ink-soft);
+  max-width: 46ch;
 }
-.rsvp-note strong { color: var(--ink-soft); font-weight: 600; }
+.rsvp-note strong { color: var(--ink); }
 
-.rsvp-status {
-  min-height: 1.4em;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: .95rem;
+.rsvp-status { font-family: var(--font-ui); font-size: .82rem; color: var(--olive-deep); }
+
+.rsvp-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* ── the preview state ────────────────────────────────────────── */
+
+.rsvp-preview { text-align: center; }
+.script-intro {
+  font-family: var(--font-script);
+  font-size: 1.7rem;
   color: var(--burgundy);
 }
 
-/* ── the reply preview ────────────────────────────────────────── */
-
-.rsvp-preview { margin-top: 8px; }
-
-.script-intro {
-  font-size: 1.7rem;
-  color: var(--crimson);
-}
-
 .rsvp-summary {
-  margin: 18px auto 0;
-  max-width: 380px;
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 9px 18px;
+  gap: 0;
+  margin: 22px 0;
   text-align: left;
-  font-size: .95rem;
+  border: 2px solid var(--ink);
 }
+.rsvp-summary > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: .7em 1em;
+  border-bottom: 2px solid color-mix(in srgb, var(--ink) 16%, transparent);
+}
+.rsvp-summary > div:last-child { border-bottom: 0; }
 .rsvp-summary dt {
   font-family: var(--font-ui);
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .14em;
-  font-size: .6rem;
-  color: var(--champagne-soft);
-  padding-top: .35em;
+  font-size: .62rem;
+  color: var(--ink-soft);
+  align-self: center;
 }
 .rsvp-summary dd {
   margin: 0;
   font-family: var(--font-display);
+  font-size: .98rem;
   color: var(--ink);
+  text-align: right;
 }

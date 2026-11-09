@@ -133,6 +133,7 @@
       marcellus: "'Marcellus', serif",
       italiana: "'Italiana', serif",
       rozhaOne: "'Rozha One', serif",
+      yatraOne: "'Yatra One', serif",
       libreCaslon: "'Libre Caslon Text', serif"
     },
     display: {
@@ -165,6 +166,7 @@
     },
     body: {
       jost: "'Jost', sans-serif",
+      spaceGrotesk: "'Space Grotesk', sans-serif",
       dmSans: "'DM Sans', sans-serif",
       lato: "'Lato', sans-serif",
       montserrat: "'Montserrat', sans-serif",
@@ -235,38 +237,38 @@
   /* Removable & recolourable pieces of the suite — keyed in HTML
      via data-element-key and hidden through config.hiddenElements. */
   var elementLabels = {
-    'opening-corner-tl': 'Blossom cascade · top left',
-    'opening-corner-tr': 'Blossom cascade · top right',
-    'opening-bell-l': 'Temple bell · left',
-    'opening-bell-r': 'Temple bell · right',
-    'opening-dust': 'The petal drift',
+    'opening-tiles': 'The rangoli corner tiles',
+    'opening-ticker': 'The marquee ticker',
     'opening-glow': 'Diya glow',
-    'opening-watermark': 'Om watermark',
     'opening-eyebrow': 'Opening introduction',
     'opening-names': 'Opening names',
-    'fireflies': 'The petal drift',
-    'gate-pediment': 'The mehrab arch',
-    'envelope-shadow': 'Gate shadow',
+    'envelope-shadow': 'Ticket shadow',
     'gate-crest-art': 'The gold-foil medallion',
-    'envelope-seal': 'The medallion',
     'opening-hint': 'Invitation hint',
     'open-button': 'Open button',
-    'hero-card': 'The invitation card',
+    'hero-card': 'The stage frame',
+    'hero-mandala': 'The rangoli watermark',
+    'hero-ganesha': 'The golden Ganesha',
     'hero-cascade-tl': 'Blossom cascade · top left',
     'hero-cascade-tr': 'Blossom cascade · top right',
+    'hero-spray-tl': 'Marigold spray · top left',
+    'hero-spray-tr': 'Marigold spray · top right',
+    'hero-spray-bl': 'Marigold spray · bottom left',
+    'hero-spray-br': 'Marigold spray · bottom right',
     'hero-bell-tl': 'Temple bell · top left',
     'hero-bell-tr': 'Temple bell · top right',
+    'hero-jasmine-l': 'Blossom strand · left',
+    'hero-jasmine-r': 'Blossom strand · right',
+    'hero-pavilion': 'The temple pavilion',
+    'hero-drape': 'The silk drape',
     'hero-leaf-bl': 'Banana leaves · bottom left',
     'hero-leaf-br': 'Banana leaves · bottom right',
     'hero-diya-bl': 'Brass diya · bottom left',
     'hero-diya-br': 'Brass diya · bottom right',
-    'hero-lotus-bl': 'Lotus · bottom left',
+    'hero-lotus-bl': 'Lotus cluster · bottom left',
     'hero-lotus-br': 'Lotus · bottom right',
-    'invite-spray-top': 'The golden Ganesha',
-    'hero-dust': 'Hero petal drift',
+    'hero-sparkle': 'Gold sparkles',
     'folio-quote': 'Keepsake quote card',
-    'folio-note-one': 'Folio note i',
-    'story-peacock': 'The lotus cluster',
     'story-caption': 'Story inscription',
     'story-note': 'Story handwritten note',
     'std-glow': 'Diya wash',
@@ -280,11 +282,9 @@
     'detail-mehndi': 'Events · mehndi',
     'detail-feast': 'Events · reception',
     'details-bouquet': 'The particulars',
-    'details-arch': 'Events ornament',
     'palette-swatches': 'Palette swatches',
     'palette-dresscode': 'Dress code note',
     'day-words': 'The garland of moments',
-    'venue-lights': 'The garland swag',
     'venue-ornament': 'The mandap',
     'venue-diya': 'The diya pair',
     'rsvp-watermark': 'RSVP watermark',
@@ -292,7 +292,6 @@
     'countdown-clock': 'Countdown clock',
     'countdown-wreath': 'The rangoli mandala',
     'closing-swag': 'Closing blossom swag',
-    'closing-couple': 'The couple',
     'closing-message': 'Closing message',
     'closing-seal': 'Closing seal',
     'footer-ornament': 'Footer ornament'
@@ -655,11 +654,11 @@
        line-work, deep maroon ink and dusty rose accents, the language
        of the elegant Indian wedding card. Night tones appear only in
        the menu & nav glass.                                          */
-    blush:    { burgundy: '#7D2B3A', deep: '#631F2C', wine: '#471522', crimson: '#C25E7C', champagne: '#B6893C', soft: '#8F6B2C', parchment: '#F7EEE2', ivory: '#F3E3D3', paper: '#FBF3E8', night: '#3D1420', nightDeep: '#2E0E18', olive: '#5F7C4F', oliveDeep: '#475F3B', sage: '#93A987', rose: '#E0A5B6', ink: '#4E3524', inkSoft: '#6E5138', charcoal: '#A18A76' },
-    marigold: { burgundy: '#A63A46', deep: '#822D39', wine: '#521A24', crimson: '#C4406E', champagne: '#B8862B', soft: '#96702A', parchment: '#FBF5E6', ivory: '#F8F1E0', paper: '#FFFBEF', night: '#43131C', nightDeep: '#33101A', olive: '#4E6B4A', oliveDeep: '#39513A', sage: '#8CA48B', rose: '#C97A94', ink: '#40261A', inkSoft: '#6E4A38', charcoal: '#96796A' },
-    rani:     { burgundy: '#A93A62', deep: '#83294C', wine: '#4E1630', crimson: '#C8502F', champagne: '#B8862B', soft: '#96702A', parchment: '#FCF3EE', ivory: '#F9EFE8', paper: '#FFFAF4', night: '#431226', nightDeep: '#330D1D', olive: '#4E6B4A', oliveDeep: '#39513A', sage: '#8CA48B', rose: '#D67C9C', ink: '#46222C', inkSoft: '#75434F', charcoal: '#9A757F' },
-    peacock:  { burgundy: '#2F6B52', deep: '#245542', wine: '#123226', crimson: '#3E7D5C', champagne: '#B8862B', soft: '#96702A', parchment: '#F4F7EC', ivory: '#F1F5E6', paper: '#FCFEF5', night: '#15382B', nightDeep: '#0F2B21', olive: '#3E6B4F', oliveDeep: '#2C513B', sage: '#8FAF94', rose: '#C88BA6', ink: '#253A2C', inkSoft: '#4A6553', charcoal: '#7E9689' },
-    sindoor:  { burgundy: '#96202C', deep: '#741622', wine: '#450A12', crimson: '#C8502F', champagne: '#C08A2A', soft: '#9A7026', parchment: '#FBF3E6', ivory: '#F8EFDC', paper: '#FFFBEE', night: '#430912', nightDeep: '#32060D', olive: '#6B6242', oliveDeep: '#524A30', sage: '#A29B7E', rose: '#D68090', ink: '#43161E', inkSoft: '#7A414B', charcoal: '#A27E82' }
+    blush:    { burgundy: '#B5123F', deep: '#8E0E30', wine: '#56091F', crimson: '#E24B7A', champagne: '#E8A020', soft: '#B97F12', parchment: '#F7EDDA', ivory: '#FBF3E2', paper: '#FFF9EC', night: '#2A1015', nightDeep: '#1E090E', olive: '#1C6B4E', oliveDeep: '#0F5238', sage: '#7FA98F', rose: '#F0A9C0', ink: '#2B1512', inkSoft: '#5C3A2E', charcoal: '#9C8266' },
+    marigold: { burgundy: '#C2410F', deep: '#9A3009', wine: '#5C1B06', crimson: '#E06A2B', champagne: '#F2A007', soft: '#BC7A08', parchment: '#FBF2DC', ivory: '#FCF4E0', paper: '#FFFBEE', night: '#33150A', nightDeep: '#240D05', olive: '#4E6B2A', oliveDeep: '#39511B', sage: '#A0A97B', rose: '#E89A56', ink: '#33200F', inkSoft: '#6E4A22', charcoal: '#A68B68' },
+    rani:     { burgundy: '#D81E5B', deep: '#AC1046', wine: '#6E0930', crimson: '#F0558B', champagne: '#F2A007', soft: '#BC7A08', parchment: '#FDF0E4', ivory: '#FDF2E9', paper: '#FFF9F1', night: '#38091F', nightDeep: '#280515', olive: '#8E2A5C', oliveDeep: '#6E1C45', sage: '#B07F97', rose: '#F585AC', ink: '#33101F', inkSoft: '#70304B', charcoal: '#A67A8C' },
+    peacock:  { burgundy: '#0F6B4A', deep: '#0A5238', wine: '#063122', crimson: '#2E9A6E', champagne: '#E8A020', soft: '#B97F12', parchment: '#EDF6EA', ivory: '#F1F8EE', paper: '#FAFEF7', night: '#0A2418', nightDeep: '#051810', olive: '#1C6B4E', oliveDeep: '#0F5238', sage: '#7FA98F', rose: '#68C29A', ink: '#0E2A1E', inkSoft: '#2E5C46', charcoal: '#6E9682' },
+    sindoor:  { burgundy: '#C0181F', deep: '#96100F', wine: '#5C0708', crimson: '#E8452E', champagne: '#F2A007', soft: '#BC7A08', parchment: '#FCF0DC', ivory: '#FDF2DE', paper: '#FFFAEC', night: '#330708', nightDeep: '#230404', olive: '#7A4A18', oliveDeep: '#5C360F', sage: '#B08F62', rose: '#F07A5C', ink: '#301010', inkSoft: '#6E2A26', charcoal: '#A67A72' }
   };
 
   function applyTheme() {

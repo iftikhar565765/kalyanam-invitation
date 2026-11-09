@@ -74,7 +74,7 @@ window.HEIRLOOM = {
     menuCountdown: "The Countdown",
     menuClosing: "A Closing Note",
     openingEyebrow: "With the divine blessings of both families, you are invited to the wedding of",
-    openingHint: "Touch the doors to enter",
+    openingHint: "Touch the ticket to open",
     openButton: "Enter the Celebration",
     skipButton: "Skip straight to the invitation",
     envelopeAddress: "their honoured guests",
@@ -82,6 +82,7 @@ window.HEIRLOOM = {
     invitationLead: "We cordially invite you to celebrate the wedding of",
     invitationAnd: "and",
     invitationClosing: "Your presence will make our day complete",
+    heroVenueLabel: "Venue",
     sceneSignboard: "Together is our favorite place to be",
     invitationVenueSuffix: "· Bengaluru",
     storyKicker: "Their Story",
@@ -182,21 +183,21 @@ window.HEIRLOOM = {
   },
 
   palette: [
-    { name: "Blush Ivory",    color: "#F6EADF" },
-    { name: "Antique Gold",   color: "#B6893C" },
-    { name: "Deep Maroon",    color: "#7D2B3A" },
-    { name: "Rose Blossom",   color: "#E0A5B6" },
-    { name: "Banana Leaf",    color: "#5F7C4F" },
-    { name: "Temple Brass",   color: "#8A6A2F" }
+    { name: "Rani Pink",     color: "#D81E5B" },
+    { name: "Marigold",      color: "#F5A623" },
+    { name: "Temple Ink",    color: "#2A1015" },
+    { name: "Emerald",       color: "#1C6B4E" },
+    { name: "Kumkum",        color: "#8E0E30" },
+    { name: "Card Cream",    color: "#FBF3E2" }
   ],
   theme: "blush",
   themeColors: {},
   fonts: {
-    editorial: "rozhaOne",
+    editorial: "yatraOne",
     display: "ebGaramond",
     script: "pinyon",
     hand: "shadowsIntoLight",
-    body: "jost"
+    body: "spaceGrotesk"
   },
 
   /* ── Wedding festivities — SAMPLE words for the garland.

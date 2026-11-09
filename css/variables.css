@@ -1,39 +1,39 @@
 /* ═══════════════════════════════════════════════════════════════
-   KALYANAM · variables.css — the printed wedding card
+   KALYANAM · variables.css — brutalist maximalist Indian
    ---------------------------------------------------------------
-   Warm linen table, ivory-cream card paper, antique gold
-   line-work, deep maroon ink and dusty rose blossoms — the
-   language of the reference cards. Every token here is
-   overwritten at runtime by main.js applyTheme() from the
+   Flat print colour on warm cream paper: kumkum maroon and
+   rani pink, marigold gold and temple emerald, all held in by
+   thick ink borders and hard offset shadows. Every token here
+   is overwritten at runtime by main.js applyTheme() from the
    editor's palettes, so the moods (blush, marigold, rani,
    peacock, sindoor) recolour the whole suite. Defaults mirror
    the blush preset.
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
-  /* ── the kalyana palette (blush mood) ─────────────────────── */
-  --burgundy:      #7D2B3A;   /* deep maroon — primary accent   */
-  --burgundy-deep: #631F2C;   /* pressed maroon                 */
-  --wine:          #471522;   /* deepest maroon — strong ink    */
-  --crimson:       #C25E7C;   /* rose pink — blossom accent     */
-  --champagne:     #B6893C;   /* antique gold                   */
-  --champagne-soft:#8F6B2C;   /* burnished gold                 */
-  --parchment:     #F7EEE2;   /* warm light wash                */
-  --ivory:         #F3E3D3;   /* blush ivory page ground        */
-  --paper-raised:  #FBF3E8;   /* raised card paper              */
-  --night:         #3D1420;   /* deep maroon ground (menu/nav)  */
-  --night-deep:    #2E0E18;
-  --olive:         #5F7C4F;   /* banana-leaf green              */
-  --olive-deep:    #475F3B;
-  --sage:          #93A987;
-  --rose:          #E0A5B6;   /* dusty rose blossom             */
-  --ink:           #4E3524;   /* warm bronze ink on cream       */
-  --ink-soft:      #6E5138;
-  --charcoal:      #A18A76;
+  /* ── the kalyana palette (blush mood — brutalist) ─────────── */
+  --burgundy:      #B5123F;   /* rani-kumkum — primary accent    */
+  --burgundy-deep: #8E0E30;   /* pressed maroon                  */
+  --wine:          #56091F;   /* deep maroon — strong ink        */
+  --crimson:       #E24B7A;   /* rose pink — blossom accent      */
+  --champagne:     #E8A020;   /* marigold gold                   */
+  --champagne-soft:#B97F12;   /* burnished gold                  */
+  --parchment:     #F7EDDA;   /* warm light wash                 */
+  --ivory:         #FBF3E2;   /* cream page ground               */
+  --paper-raised:  #FFF9EC;   /* raised card paper               */
+  --night:         #2A1015;   /* temple ink maroon (dark bands)  */
+  --night-deep:    #1E090E;
+  --olive:         #1C6B4E;   /* temple emerald                  */
+  --olive-deep:    #0F5238;
+  --sage:          #7FA98F;
+  --rose:          #F0A9C0;   /* soft blossom pink               */
+  --ink:           #2B1512;   /* warm near-black ink             */
+  --ink-soft:      #5C3A2E;
+  --charcoal:      #9C8266;
 
   /* ── derived golds ────────────────────────────────────────── */
   --gold:          var(--champagne);
-  --gold-bright:   color-mix(in srgb, var(--champagne) 72%, #E9C868);
+  --gold-bright:   color-mix(in srgb, var(--champagne) 72%, #F6C55C);
   --gold-dim:      color-mix(in srgb, var(--champagne) 58%, var(--ink) 14%);
   --gold-line:     color-mix(in srgb, var(--champagne) 52%, transparent);
   --gold-faint:    color-mix(in srgb, var(--champagne) 26%, transparent);
@@ -44,32 +44,55 @@
   --paper-wash:    color-mix(in srgb, var(--burgundy) 4%, var(--paper-raised));
   --cream-deep:    color-mix(in srgb, var(--parchment) 62%, var(--ivory) 38%);
 
-  /* ── type — Cormorant Garamond · EB Garamond · Pinyon Script ── */
-  --font-editorial: 'Cormorant Garamond', serif;  /* display headings   */
-  --font-display:   'EB Garamond', serif;        /* romantic serif     */
-  --font-script:    'Pinyon Script', cursive;    /* signatures & names */
+  /* ── brutalist hardware ───────────────────────────────────── */
+  --line:          var(--ink);
+  --line-w:        3px;
+  --shadow-hard:   7px 7px 0 var(--ink);
+  --shadow-hard-sm:4px 4px 0 var(--ink);
+  --shadow-hard-lg:11px 11px 0 var(--ink);
+  --shadow-ink:    7px 7px 0 color-mix(in srgb, var(--ink) 82%, transparent);
+
+  /* ── type ───────────────────────────────────────────────────
+     Yatra One (Mumbai railway signage) for display · EB Garamond
+     for the printed word · Pinyon Script for names · Anton for
+     the giant condensed numerals · Space Grotesk for labels.   */
+  --font-editorial: 'Cormorant Garamond', serif;  /* display headings (config: Yatra One) */
+  --font-display:   'EB Garamond', serif;        /* romantic serif       */
+  --font-script:    'Pinyon Script', cursive;    /* signatures & names   */
   --font-hand:      'Shadows Into Light', cursive;
-  --font-body:      'EB Garamond', serif;        /* the printed word   */
-  --font-ui:        'Jost', sans-serif;          /* interface & labels */
+  --font-body:      'EB Garamond', serif;        /* the printed word     */
+  --font-ui:        'Space Grotesk', sans-serif; /* interface & labels   */
+  --font-brutal:    'Anton', sans-serif;         /* giant condensed caps */
+  --font-sign:      'Bungee', cursive;           /* ticket badges        */
   --font-deva:      'Tiro Devanagari Hindi', serif;
-  --font-caps:      'Cormorant Garamond', serif; /* spaced serif caps  */
+  --font-caps:      'Space Grotesk', sans-serif; /* spaced label caps    */
 
   /* ── rhythm ───────────────────────────────────────────────── */
-  --container:     780px;
+  --container:     820px;
   --gutter:        clamp(20px, 4.5vw, 48px);
-  --space-scene:   clamp(64px, 9vh, 110px);
+  --space-scene:   clamp(72px, 10vh, 124px);
 
-  --radius-card:   10px;
-  --shadow-card:   0 2px 6px rgba(93, 52, 22, .14), 0 22px 44px -18px rgba(93, 52, 22, .30);
+  --radius-card:   0px;
+  --shadow-card:   10px 10px 0 var(--ink);
   --shadow-gold:   0 1px 0 rgba(255, 248, 224, .6) inset;
 
   --ease-out:      cubic-bezier(.22, .61, .36, 1);
+
+  /* ── the printed card keeps its own soft palette ────────────
+     (the hero is a replica of the reference card: blush cream,
+     antique gold line-work and maroon script — constant, so the
+     card always prints true regardless of the site mood)        */
+  --card-cream:    #FBF3E8;
+  --card-cream-2:  #F7EDDF;
+  --card-gold:     #B6893C;
+  --card-gold-soft:#CDA96A;
+  --card-maroon:   #7D2B3A;
+  --card-rose:     #C25E7C;
+  --card-ink:      #4E3524;
+  --card-ink-soft: #6E5138;
 }
 
-/* ── one paper system for every scene ───────────────────────────
-   The whole suite reads as one floating blush-ivory card inside a
-   gold mehrab, like the reference: alternating washes keep the
-   rhythm without ever breaking the paper.                        */
+/* ── one stage system for every scene ─────────────────────────── */
 .scene {
   --scene-bg: var(--ivory);
   --scene-bg-deep: var(--cream-deep);
