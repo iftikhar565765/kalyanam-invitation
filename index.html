@@ -20,7 +20,7 @@
   <meta property="og:image" content="https://kalyanam-invitation.glauxstudio.workers.dev/assets/og-card.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="A gold Ganesha, a marigold toran with brass bells — the wedding invitation of Arjun &amp; Meghana">
+  <meta property="og:image:alt" content="A gold Ganesha above a cusped gold mehrab arch card with pink blossom cascades and temple bells — the wedding invitation of Arjun &amp; Meghana">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Arjun &amp; Meghana — An Invitation" data-meta-name="twitter:title" data-meta-content="content.socialTitle">
   <meta name="twitter:description" data-meta-name="twitter:description" data-meta-content="content.socialDescription">
@@ -83,10 +83,10 @@
     <i class="opening__mote" style="--x:24%; --y:60%; --s:1.6px; --o:.3;  --t:21s;  --d:-11s" aria-hidden="true"></i>
     <i class="opening__mote" style="--x:76%; --y:67%; --s:1.8px; --o:.36; --t:22s;  --d:-4s" aria-hidden="true"></i>
 
-    <img class="opening__toran" src="assets/art/toran.png" alt="" aria-hidden="true" data-element-key="opening-toran">
-
-    <img class="opening__corner opening__corner--tl" src="assets/art/marigold-spray.png" alt="" aria-hidden="true" data-element-key="opening-corner-tl">
-    <img class="opening__corner opening__corner--tr" src="assets/art/marigold-spray.png" alt="" aria-hidden="true" data-element-key="opening-corner-tr">
+    <img class="opening__corner opening__corner--tl" src="assets/art/blossom-cascade.png" alt="" aria-hidden="true" data-element-key="opening-corner-tl">
+    <img class="opening__corner opening__corner--tr" src="assets/art/blossom-cascade.png" alt="" aria-hidden="true" data-element-key="opening-corner-tr">
+    <img class="opening__bell opening__bell--l" src="assets/art/temple-bell.png" alt="" aria-hidden="true" data-element-key="opening-bell-l">
+    <img class="opening__bell opening__bell--r" src="assets/art/temple-bell.png" alt="" aria-hidden="true" data-element-key="opening-bell-r">
 
     <span class="opening__glow" aria-hidden="true" data-element-key="opening-glow"></span>
     <span class="opening__watermark" aria-hidden="true" data-element-key="opening-watermark">ॐ</span>
@@ -125,7 +125,6 @@
         <circle class="orn-dot" cx="0" cy="6" r="1"/>
       </g>
     </svg>
-        <img class="gate-toran" src="assets/art/toran.png" alt="" aria-hidden="true" data-element-key="gate-toran">
 
         <!-- The whole gate is one accessible control -->
         <button id="envelope" class="gates" type="button" aria-label="Open your invitation"
@@ -275,75 +274,103 @@
   <main id="main-content">
 
     <!-- ══════════════════════════════════════════════════════════
-       Ⅰ · THE INVITATION — the card front: Ganesha above, the
-       names in sepia ink beneath the marigold toran, the couple
-       framed by the gold mehrab arch
+       Ⅰ · THE INVITATION — the reference card, recreated: a floating
+       blush-ivory card inside a tall cusped gold mehrab arch, with
+       painterly ornaments breaking the frame at all four corners —
+       blossom cascades and temple bells above, lotus, brass diyas
+       and banana leaves below — the names and every word centred.
        ══════════════════════════════════════════════════════════ -->
     <section id="invitation" class="scene scene--hero" aria-labelledby="invitation-title">
-      <img class="hero-toran" src="assets/art/toran.png" alt="" aria-hidden="true" data-element-key="hero-toran">
       <img class="hero-mandala" src="assets/art/mandala.png" alt="" aria-hidden="true" data-element-key="hero-mandala">
-      <div class="container hero-inner">
-        <figure class="hero-invocation reveal" data-element-key="invite-spray-top" role="img"
-          aria-label="A golden Ganesha — the invocation that opens every Indian wedding card.">
-          <img class="hero-invocation__art" src="assets/art/ganesha.png" alt="" aria-hidden="true">
-        </figure>
-        <p class="hero-shloka reveal" aria-hidden="true">॥ श्री गणेशाय नमः ॥ <span class="hero-shloka__caps label-caps">Shree Ganeshaya Namah</span></p>
 
-        <p class="hero-eyebrow eyebrow reveal" data-content="content.invitationEyebrow">Together with their families</p>
-
-        <h1 id="invitation-title" class="hero-names" tabindex="-1">
-          <span class="hero-name reveal" data-content="couple.partner-one">Arjun</span>
-          <span class="hero-amp script reveal" aria-hidden="true">&amp;</span>
-          <span class="hero-name reveal" data-content="couple.partner-two">Meghana</span>
-        </h1>
-
-        <p class="hero-lead reveal" data-content="content.invitationLead">request the honour of your presence as they exchange vows and walk the seven sacred steps — two days of haldi, mehndi, music and one blessed muhurat.</p>
-
-        <svg class="hero-divider reveal" viewBox="0 0 320 44" aria-hidden="true">
-      <path class="rule" d="M10 22 H 108 M212 22 H 310"/>
-      <path class="orn-line" d="M160 13 L 169 22 L 160 31 L 151 22 Z"/>
-      <path class="orn-line orn-line--thin" d="M160 17.6 L 164.4 22 L 160 26.4 L 155.6 22 Z"/>
-      <circle class="dot-gold" cx="119" cy="22" r="1.9"/>
-      <circle class="dot-gold" cx="201" cy="22" r="1.9"/>
+      <div class="hero-card reveal" data-element-key="hero-card">
+        <svg class="hero-card__arch" viewBox="0 0 720 1060" preserveAspectRatio="none" aria-hidden="true">
+      <path class="hero-card__paper" d="M 30 1030 L 30 472 Q -6 402.1 45.7 342.9 Q 30.8 267.1 95.8 225.3 Q 108.6 149.3 184.1 133.2 Q 221.6 65.6 298.3 75.5 Q 360 33.5 421.7 75.5 Q 498.4 65.6 535.9 133.2 Q 611.4 149.3 624.2 225.3 Q 689.2 267.1 674.3 342.9 Q 726 402.1 690 472 L 690 1030 Z"/>
+      <path class="hero-card__line" d="M 30 1030 L 30 472 Q -6 402.1 45.7 342.9 Q 30.8 267.1 95.8 225.3 Q 108.6 149.3 184.1 133.2 Q 221.6 65.6 298.3 75.5 Q 360 33.5 421.7 75.5 Q 498.4 65.6 535.9 133.2 Q 611.4 149.3 624.2 225.3 Q 689.2 267.1 674.3 342.9 Q 726 402.1 690 472 L 690 1030"/>
+      <path class="hero-card__line hero-card__line--inner" d="M 46 1030 L 46 472 Q -7.1 410.9 30.2 339 Q 14.7 260.1 82.4 216.6 Q 95.8 137 174.8 120.2 Q 213.6 50.1 293 60.4 Q 360 14.9 427 60.4 Q 506.4 50.1 545.2 120.2 Q 624.2 137 637.6 216.6 Q 705.3 260.1 689.8 339 Q 727.1 410.9 674 472 L 674 1030"/>
+      <path class="hero-card__line hero-card__line--fine" d="M 60 1030 L 60 472 Q -8.1 418.6 16.6 335.6 Q 0.6 253.9 70.6 209 Q 84.6 126.3 166.6 108.9 Q 206.6 36.6 288.5 47.1 Q 360 -1.5 431.5 47.1 Q 513.4 36.6 553.4 108.9 Q 635.4 126.3 649.4 209 Q 719.4 253.9 703.4 335.6 Q 728.1 418.6 660 472 L 660 1030"/>
+      <path class="hero-card__finial" d="M 360 12 L 368 27 L 360 42 L 352 27 Z"/>
+      <path class="hero-card__base rule" d="M 60 1000 H 660 M 60 1014 H 660"/>
     </svg>
 
-        <p class="hero-words reveal" data-content="wedding.words">Saturday · The Twenty-Second of May · Two Thousand Twenty-Seven</p>
-        <p class="hero-venue label-caps reveal">
-          <span data-content="venue.name">Sri Lakshmi Venkateshwara Kalyana Mandapam</span>
-          <span class="hero-venue-suffix" data-content="content.invitationVenueSuffix">· Bengaluru</span>
-        </p>
+        <img class="hero-orn hero-orn--cascade-tl" src="assets/art/blossom-cascade.png" alt="" aria-hidden="true" data-element-key="hero-cascade-tl">
+        <img class="hero-orn hero-orn--cascade-tr" src="assets/art/blossom-cascade.png" alt="" aria-hidden="true" data-element-key="hero-cascade-tr">
+        <img class="hero-orn hero-orn--bell-tl" src="assets/art/temple-bell.png" alt="" aria-hidden="true" data-element-key="hero-bell-tl">
+        <img class="hero-orn hero-orn--bell-tr" src="assets/art/temple-bell.png" alt="" aria-hidden="true" data-element-key="hero-bell-tr">
+        <img class="hero-orn hero-orn--leaf-bl" src="assets/art/banana-leaf.png" alt="" aria-hidden="true" data-element-key="hero-leaf-bl">
+        <img class="hero-orn hero-orn--leaf-br" src="assets/art/banana-leaf.png" alt="" aria-hidden="true" data-element-key="hero-leaf-br">
+        <img class="hero-orn hero-orn--diya-bl" src="assets/art/brass-diya.png" alt="" aria-hidden="true" data-element-key="hero-diya-bl">
+        <img class="hero-orn hero-orn--diya-br" src="assets/art/brass-diya.png" alt="" aria-hidden="true" data-element-key="hero-diya-br">
+        <img class="hero-orn hero-orn--lotus-bl" src="assets/art/lotus-cluster.png" alt="" aria-hidden="true" data-element-key="hero-lotus-bl">
+        <img class="hero-orn hero-orn--lotus-br" src="assets/art/lotus-cluster.png" alt="" aria-hidden="true" data-element-key="hero-lotus-br">
 
-        <figure class="hero-couple reveal" role="img"
-          aria-label="The bride and groom beneath the mehrab arch — she in a rani-pink kanjivaram, he in ivory silk and a gold mundasu.">
-          <svg class="hero-couple__arch" viewBox="0 0 360 432" aria-hidden="true">
-      <path class="arch-main" d="M14 432 C 14 244 24 98 180 14 C 336 98 346 244 346 432"/>
-      <path class="arch-thin" d="M36 432 C 36 252 46 122 180 38 C 314 122 324 252 324 432"/>
-      <path class="orn-line" d="M180 2 L 187 13 L 180 24 L 173 13 Z"/>
-      <circle class="dot-gold" cx="180" cy="38" r="2.2"/>
-      <circle class="arch-halo" cx="180" cy="38" r="5.4"/>
-      <g class="orn-line" transform="translate(46 296) scale(0.85)">
-        <circle r="3.1"/>
-        <path d="M0 -7.8 V -5 M0 7.8 V 5 M-7.8 0 H -5 M7.8 0 H 5 M-5.5 -5.5 L -3.6 -3.6 M5.5 5.5 L 3.6 3.6 M-5.5 5.5 L -3.6 3.6 M5.5 -5.5 L 3.6 -3.6"/>
-      </g>
-      <g class="orn-line" transform="translate(314 296) scale(0.85)">
-        <circle r="3.1"/>
-        <path d="M0 -7.8 V -5 M0 7.8 V 5 M-7.8 0 H -5 M7.8 0 H 5 M-5.5 -5.5 L -3.6 -3.6 M5.5 5.5 L 3.6 3.6 M-5.5 5.5 L -3.6 3.6 M5.5 -5.5 L 3.6 -3.6"/>
-      </g>
-      <g class="orn-line" transform="translate(40 360)">
-        <path d="M0 -8.4 V -5.6"/>
-        <path d="M-4.1 3.6 C -4.1 -2.4 -2.3 -5.6 0 -5.6 C 2.3 -5.6 4.1 -2.4 4.1 3.6"/>
-        <path d="M-5.7 3.6 H 5.7"/>
-        <circle class="orn-dot" cx="0" cy="6" r="1"/>
-      </g>
-      <g class="orn-line" transform="translate(320 360)">
-        <path d="M0 -8.4 V -5.6"/>
-        <path d="M-4.1 3.6 C -4.1 -2.4 -2.3 -5.6 0 -5.6 C 2.3 -5.6 4.1 -2.4 4.1 3.6"/>
-        <path d="M-5.7 3.6 H 5.7"/>
-        <circle class="orn-dot" cx="0" cy="6" r="1"/>
+        <div class="hero-card__inner">
+          <figure class="hero-invocation reveal" data-element-key="invite-spray-top" role="img"
+            aria-label="A golden Ganesha — the invocation that opens every Indian wedding card.">
+            <svg class="hero-niche" viewBox="0 0 160 120" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+      <path class="orn-line" d="M 24 118 L 24 62 C 24 26 48 10 80 8 C 112 10 136 26 136 62 L 136 118"/>
+      <path class="orn-line orn-line--thin" d="M 32 118 L 32 64 C 32 32 54 18 80 16 C 106 18 128 32 128 64 L 128 118"/>
+      <path class="orn-line" d="M 80 2 L 85 10 L 80 18 L 75 10 Z"/>
+      <circle class="dot-gold" cx="24" cy="70" r="1.6"/>
+      <circle class="dot-gold" cx="136" cy="70" r="1.6"/>
+    </svg>
+            <img class="hero-invocation__art" src="assets/art/ganesha-gold.png" alt="" aria-hidden="true">
+          </figure>
+          <p class="hero-shloka reveal" aria-hidden="true">॥ श्री गणेशाय नमः ॥ <span class="hero-shloka__caps label-caps">Shree Ganeshaya Namah</span></p>
+
+          <p class="hero-eyebrow eyebrow reveal" data-content="content.invitationEyebrow">With the divine blessings of our families</p>
+
+          <p class="hero-invite-line reveal" data-content="content.invitationLead">We cordially invite you to celebrate the wedding of</p>
+
+          <h1 id="invitation-title" class="hero-names" tabindex="-1">
+            <span class="hero-name reveal" data-content="couple.partner-one">Arjun</span>
+            <span class="hero-and reveal" data-content="content.invitationAnd">and</span>
+            <span class="hero-name reveal" data-content="couple.partner-two">Meghana</span>
+          </h1>
+
+          <div class="hero-date reveal" role="group" aria-label="The wedding date">
+            <p class="hero-date-week label-caps" data-content="wedding.weekday">Saturday</p>
+            <p class="hero-date-row">
+              <span class="hero-date-month" data-content="wedding.month">May</span>
+              <svg class="hero-date-orn" viewBox="0 0 34 44" aria-hidden="true">
+      <g fill="none">
+        <path class="orn-line" d="M17 4 L 22 12 L 17 20 L 12 12 Z"/>
+        <path class="orn-line orn-line--thin" d="M17 20 V 34"/>
+        <path class="orn-line orn-line--thin" d="M17 27 C 13.5 25.8 11.4 23.4 10.7 20.2 M17 31.5 C 20.5 30.3 22.6 27.9 23.3 24.7"/>
+        <circle class="dot-gold" cx="17" cy="38.5" r="1.5"/>
       </g>
     </svg>
-          <img class="hero-couple__art" src="assets/art/couple.png" alt="" aria-hidden="true">
-        </figure>
+              <span class="hero-date-num foil" data-content="wedding.day">22</span>
+              <svg class="hero-date-orn hero-date-orn--flip" viewBox="0 0 34 44" aria-hidden="true">
+      <g fill="none">
+        <path class="orn-line" d="M17 4 L 22 12 L 17 20 L 12 12 Z"/>
+        <path class="orn-line orn-line--thin" d="M17 20 V 34"/>
+        <path class="orn-line orn-line--thin" d="M17 27 C 13.5 25.8 11.4 23.4 10.7 20.2 M17 31.5 C 20.5 30.3 22.6 27.9 23.3 24.7"/>
+        <circle class="dot-gold" cx="17" cy="38.5" r="1.5"/>
+      </g>
+    </svg>
+              <span class="hero-date-year" data-content="wedding.year">2027</span>
+            </p>
+          </div>
+
+          <p class="hero-muhurat label-caps reveal"><span data-content="wedding.muhuratLabel">Muhurat</span><span class="hero-muhurat-sep" aria-hidden="true"> · </span><span data-content="wedding.muhurat">11:24 in the morning</span></p>
+
+          <svg class="hero-lotus-rule reveal" viewBox="0 0 120 30" aria-hidden="true">
+      <g fill="none">
+        <path class="rule" d="M 6 15 H 38 M 82 15 H 114"/>
+        <path class="orn-line" d="M60 6 C 63.4 10.8 63.4 17.6 60 22.6 C 56.6 17.6 56.6 10.8 60 6 Z"/>
+        <path class="orn-line orn-line--thin" d="M50 9 C 54.4 12.4 57 16.8 57.6 22 C 52.4 19.6 49 14.8 50 9 Z"/>
+        <path class="orn-line orn-line--thin" d="M70 9 C 65.6 12.4 63 16.8 62.4 22 C 67.6 19.6 71 14.8 70 9 Z"/>
+      </g>
+    </svg>
+
+          <p class="hero-venue reveal">
+            <span class="hero-venue-name" data-content="venue.name">Sri Lakshmi Venkateshwara Kalyana Mandapam</span>
+            <span class="hero-venue-address" data-content="venue.address">123 Temple Road, Rajajinagar, Bengaluru, Karnataka 560010</span>
+          </p>
+
+          <p class="hero-closing-script reveal" data-content="content.invitationClosing">Your presence will make our day complete</p>
+        </div>
       </div>
 
       <a class="hero-scroll reveal" href="#story" aria-label="Begin the story">
@@ -371,7 +398,7 @@
             <p class="prose prose--dropcap reveal" data-content="content.storyParagraphOne">Every good love story begins small, and ours began over filter coffee at a friend's engagement in Bengaluru — one borrowed umbrella, a sudden March downpour, and a conversation that outlasted the rain.</p>
             <p class="prose reveal" data-content="content.storyParagraphTwo">Five years, two cities and a thousand shared plates of dosa later, we are writing our next chapter in the oldest language we know — love, spoken this time in jasmine, turmeric and gold. Nothing would mean more than to have you beside us when we do.</p>
             <p class="story-note hand reveal"><span data-content="content.storyNote">chapter the first, and all the rest</span><span class="story-note-credit" data-content="content.storyNoteCredit">— scribbled on a Namma Metro ticket, Indiranagar to Malleshwaram</span></p>
-            <img class="story-peacock reveal" src="assets/art/peacock.png" alt="" aria-hidden="true" data-element-key="story-peacock">
+            <img class="story-lotus reveal" src="assets/art/lotus-cluster.png" alt="" aria-hidden="true" data-element-key="story-peacock">
           </div>
 
           <aside class="story-aside reveal">
@@ -830,7 +857,8 @@
        Ⅹ · A CLOSING NOTE — the last page of the suite
        ══════════════════════════════════════════════════════════ -->
     <section id="closing" class="scene scene--closing" aria-labelledby="closing-title">
-      <img class="closing-garland reveal" src="assets/art/garland-swag.png" alt="" aria-hidden="true" data-element-key="closing-swag">
+      <img class="closing-bloom closing-bloom--l reveal" src="assets/art/blossom-cascade.png" alt="" aria-hidden="true" data-element-key="closing-swag">
+      <img class="closing-bloom closing-bloom--r reveal" src="assets/art/blossom-cascade.png" alt="" aria-hidden="true" data-element-key="closing-swag">
       <div class="container container--narrow">
         <p class="closing-script" data-content="content.closingScript">with all our love</p>
         <h2 id="closing-title" class="closing-names script" data-content="couple.names">Arjun &amp; Meghana</h2>
@@ -840,6 +868,10 @@
           <span data-content="venue.name">Sri Lakshmi Venkateshwara Kalyana Mandapam</span>
         </p>
         <p class="closing-message" data-content="content.closingMessage" data-element-key="closing-message">Thank you, from the depths of our hearts, for being part of our story. We cannot wait to celebrate with you among the jasmine and the marigolds — your presence completes our day.</p>
+        <figure class="closing-couple reveal" role="img"
+          aria-label="The bride and groom — she in a rani-pink kanjivaram, he in ivory silk and a gold mundasu.">
+          <img src="assets/art/couple.png" alt="" aria-hidden="true" data-element-key="closing-couple">
+        </figure>
         <div class="closing-seal" aria-hidden="true" data-element-key="closing-seal">
           <img class="seal__art" src="assets/art/gold-seal.png" alt=""><span class="seal__initials script" data-content="couple.initials">A · M</span>
         </div>

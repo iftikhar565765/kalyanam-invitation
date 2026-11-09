@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Kalyanam — an ivory & gold South Indian wedding invitation. Cloudflare Workers (static assets + API) + D1",
+  "description": "Kalyanam — a blush-ivory & gold Indian wedding invitation. Cloudflare Workers (static assets + API) + D1",
   "scripts": {
     "build": "node scripts/build.mjs",
     "dev": "npm run build && npm run db:migrate:local && wrangler dev --port 8788",

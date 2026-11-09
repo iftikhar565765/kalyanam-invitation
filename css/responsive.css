@@ -17,12 +17,12 @@
   :root { --space-scene: clamp(72px, 11vh, 110px); }
 
   /* the opening */
-  .opening__toran { height: 92px; }
-  .opening__corner { width: 86px; opacity: .7; }
-  .opening__corner--tl { top: 92px; left: -18px; }
-  .opening__corner--tr { top: 92px; right: -18px; }
+  .opening__corner { width: 118px; opacity: .85; }
+  .opening__corner--tl { left: -16px; }
+  .opening__corner--tr { right: -16px; }
+  .opening__bell { width: 38px; }
   .opening__watermark { font-size: 300px; }
-  .opening__inner { padding-top: 108px; }
+  .opening__inner { padding-top: 96px; }
   .gate-stage { width: min(76vw, 292px); padding-top: 84px; }
   .gates { height: min(112vw, 375px); }
   .gate-pediment { width: min(74vw, 284px); }
@@ -32,17 +32,26 @@
   .opening__hint { margin-top: 34px; letter-spacing: .24em; }
   .opening__names { font-size: clamp(2.2rem, 10vw, 3rem); }
 
-  /* hero */
-  .hero-toran { width: 118vw; top: 52px; }
+  /* hero — the card fills the hand */
+  .hero-card { width: min(430px, calc(100% - 18px)); }
+  .hero-orn--cascade-tl, .hero-orn--cascade-tr { width: 96px; top: -18px; }
+  .hero-orn--cascade-tl { left: -26px; }
+  .hero-orn--cascade-tr { right: -26px; }
+  .hero-orn--bell-tl, .hero-orn--bell-tr { width: 30px; top: -10px; }
+  .hero-orn--leaf-bl, .hero-orn--leaf-br { width: 92px; bottom: -16px; }
+  .hero-orn--leaf-bl { left: -26px; }
+  .hero-orn--leaf-br { right: -26px; }
+  .hero-orn--diya-bl, .hero-orn--diya-br { width: 42px; bottom: -18px; }
+  .hero-orn--lotus-bl, .hero-orn--lotus-br { width: 74px; bottom: -12px; }
+  .hero-card__inner { padding: 64px 26px 74px; }
   .hero-mandala { width: 150vw; right: -52vw; top: 160px; }
-  .hero-names { font-size: clamp(2.6rem, 13.5vw, 4rem); gap: 0 .14em; }
-  .hero-shloka { font-size: 1rem; }
-  .hero-couple { width: min(78vw, 300px); }
-  .hero-venue { flex-direction: column; gap: 4px; }
+  .hero-names { font-size: clamp(2.7rem, 12.5vw, 3.6rem); }
+  .hero-date-num { font-size: 2.7rem; }
+  .hero-venue-name { letter-spacing: .16em; }
   .hero-scroll__line { height: 32px; }
 
   /* story */
-  .story-peacock { width: 120px; margin-top: 8px; }
+  .story-lotus { width: 120px; margin-top: 8px; }
   .story-quote { padding: 34px 24px 26px; }
   .story-caption svg { width: 58px; }
 
@@ -74,13 +83,15 @@
   .choices { gap: 10px 20px; }
 
   /* closing */
-  .closing-garland { width: min(78vw, 320px); }
+  .closing-bloom { width: 110px; opacity: .9; }
+  .closing-couple { width: min(64vw, 240px); }
   .closing-actions { flex-direction: column; align-items: stretch; max-width: 340px; margin-inline: auto; }
 }
 
 /* ── very small phones ───────────────────────────────────────── */
 @media (max-width: 380px) {
-  .hero-names { font-size: 2.35rem; }
+  .hero-names { font-size: 2.2rem; }
+  .hero-card__inner { padding: 56px 20px 64px; }
   .gate-stage { width: 86vw; }
   .gates { height: 128vw; }
   .programme-item { padding-inline: 16px; }

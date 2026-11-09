@@ -33,6 +33,12 @@ window.HEIRLOOM = {
     zoneLabel: "IST",                                                        // EDIT — optional note for guests abroad
     words: "Saturday · The Twenty-Second of May · Two Thousand Twenty-Seven",   // EDIT
     numerals: "22 · 05 · 2027",                                              // EDIT
+    weekday: "Saturday",                                                     // EDIT — the ornamental date row
+    month: "May",                                                            // EDIT
+    day: "22",                                                               // EDIT — the large numeral
+    year: "2027",                                                            // EDIT
+    muhuratLabel: "Muhurat",                                                 // EDIT
+    muhurat: "11:24 in the morning",                                         // EDIT
     eventTitle: "Arjun & Meghana — Wedding"                                  // EDIT (calendar entry)
   },
 
@@ -67,13 +73,15 @@ window.HEIRLOOM = {
     menuRsvp: "Kindly Respond",
     menuCountdown: "The Countdown",
     menuClosing: "A Closing Note",
-    openingEyebrow: "With the blessings of both families, you are invited to the wedding of",
+    openingEyebrow: "With the divine blessings of both families, you are invited to the wedding of",
     openingHint: "Touch the doors to enter",
     openButton: "Enter the Celebration",
     skipButton: "Skip straight to the invitation",
     envelopeAddress: "their honoured guests",
-    invitationEyebrow: "Together with their families",
-    invitationLead: "request the honour of your presence as they exchange vows and walk the seven sacred steps — two days of haldi, mehndi, music and one blessed muhurat.",
+    invitationEyebrow: "With the divine blessings of our families",
+    invitationLead: "We cordially invite you to celebrate the wedding of",
+    invitationAnd: "and",
+    invitationClosing: "Your presence will make our day complete",
     invitationVenueSuffix: "· Bengaluru",
     storyKicker: "№ 02 · Their Story",
     storyTitle: "Two hearts,",
@@ -126,7 +134,7 @@ window.HEIRLOOM = {
     paletteKicker: "№ 05 · The Colours of the Day",
     paletteTitleFirst: "The wedding",
     paletteTitleSecond: "palette",
-    paletteIntro: "Rani pink and marigold gold, temple emerald and kumkum red, zari shimmer on ivory cream — the colours of our celebration.",
+    paletteIntro: "Antique gold and deep maroon, rose blossom and banana-leaf green, bronze ink on blush ivory — the colours of our celebration.",
     dressCodeLabel: "Attire · Traditional Festive",
     dressCodeTitle: "Bright & joyous",
     dressCodeNote: "Kanjivaram sarees, silk dhotis and jewel tones are most welcome — dress as splendidly as you feel.",
@@ -173,19 +181,19 @@ window.HEIRLOOM = {
   },
 
   palette: [
-    { name: "Rani Pink",      color: "#C4406E" },
-    { name: "Marigold Gold",  color: "#E3A23C" },
-    { name: "Zari Gold",      color: "#C9922E" },
-    { name: "Temple Emerald", color: "#2F6B52" },
-    { name: "Kumkum Red",     color: "#A63A46" },
-    { name: "Ivory Cream",    color: "#F7EFDF" }
+    { name: "Blush Ivory",    color: "#F6EADF" },
+    { name: "Antique Gold",   color: "#B6893C" },
+    { name: "Deep Maroon",    color: "#7D2B3A" },
+    { name: "Rose Blossom",   color: "#E0A5B6" },
+    { name: "Banana Leaf",    color: "#5F7C4F" },
+    { name: "Temple Brass",   color: "#8A6A2F" }
   ],
-  theme: "marigold",
+  theme: "blush",
   themeColors: {},
   fonts: {
-    editorial: "prata",
-    display: "cormorant",
-    script: "greatVibes",
+    editorial: "rozhaOne",
+    display: "ebGaramond",
+    script: "pinyon",
     hand: "shadowsIntoLight",
     body: "jost"
   },

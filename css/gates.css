@@ -27,8 +27,8 @@
   aspect-ratio: 1;
   transform: translate(-50%, -50%);
   background: radial-gradient(circle,
-    color-mix(in srgb, #f6c35e 30%, transparent) 0%,
-    color-mix(in srgb, #e08a1c 13%, transparent) 34%,
+    color-mix(in srgb, var(--gold-bright) 26%, transparent) 0%,
+    color-mix(in srgb, var(--champagne) 12%, transparent) 34%,
     transparent 68%);
   filter: blur(10px);
   opacity: .4;
@@ -50,29 +50,32 @@
   user-select: none;
 }
 
-/* the fresh marigold valance across the top of the cover */
-.opening__toran {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: clamp(96px, 15vh, 158px);
-  object-fit: cover;
-  object-position: 50% 0%;
-  opacity: .97;
-  pointer-events: none;
-  filter: drop-shadow(0 10px 14px color-mix(in srgb, var(--champagne-soft) 30%, transparent));
-}
-
-/* marigold sprays in the upper corners only — the cover stays clean */
+/* blossom cascades spilling from the top corners of the cover */
 .opening__corner {
   position: absolute;
-  width: clamp(110px, 15vw, 200px);
-  opacity: .85;
+  top: -6px;
+  width: clamp(150px, 19vw, 250px);
+  opacity: .96;
   pointer-events: none;
+  filter: drop-shadow(0 8px 14px color-mix(in srgb, var(--burgundy) 16%, transparent));
 }
-.opening__corner--tl { top: 118px; left: -22px; transform: scaleX(-1) rotate(8deg); }
-.opening__corner--tr { top: 118px; right: -22px; transform: rotate(8deg); }
+.opening__corner--tl { left: -26px; }
+.opening__corner--tr { right: -26px; transform: scaleX(-1); }
+
+/* temple bells swinging beside the mehrab */
+.opening__bell {
+  position: absolute;
+  top: -4px;
+  width: clamp(46px, 6vw, 72px);
+  opacity: .95;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 10px color-mix(in srgb, var(--burgundy) 18%, transparent));
+  animation: bell-sway 4.2s ease-in-out infinite alternate;
+  transform-origin: top center;
+}
+.opening__bell--l { left: 13%; animation-delay: -2.1s; }
+.opening__bell--r { right: 13%; }
+@keyframes bell-sway { from { transform: rotate(-2.4deg); } to { transform: rotate(2.4deg); } }
 
 /* golden dust drifting through the lamplight */
 .opening__mote {
@@ -80,7 +83,7 @@
   left: var(--x); top: var(--y);
   width: var(--s); height: var(--s);
   border-radius: 50%;
-  background: radial-gradient(circle, #f2d489 0%, #d3a134 55%, transparent 75%);
+  background: radial-gradient(circle, var(--gold-bright) 0%, var(--champagne) 55%, transparent 75%);
   opacity: var(--o);
   animation: mote-drift var(--t) ease-in-out var(--d) infinite alternate;
   pointer-events: none;
@@ -138,17 +141,6 @@
   height: auto;
   color: var(--champagne-soft);
   filter: drop-shadow(0 3px 8px color-mix(in srgb, var(--champagne-soft) 32%, transparent));
-}
-.gate-toran {
-  position: absolute;
-  top: clamp(20px, 2.9vw, 34px);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 112%;
-  opacity: .98;
-  pointer-events: none;
-  filter: drop-shadow(0 8px 12px color-mix(in srgb, var(--champagne-soft) 30%, transparent));
-  z-index: 3;
 }
 
 .gates {
@@ -260,8 +252,8 @@
   left: 50%; top: 4%;
   width: 3px; height: 92%;
   transform: translateX(-50%);
-  background: linear-gradient(180deg, transparent, #f3c76a 22% 78%, transparent);
-  box-shadow: 0 0 18px 4px color-mix(in srgb, #eec05e 50%, transparent);
+  background: linear-gradient(180deg, transparent, var(--gold-bright) 22% 78%, transparent);
+  box-shadow: 0 0 18px 4px color-mix(in srgb, var(--champagne) 50%, transparent);
   opacity: .6;
   z-index: 3;
   transition: opacity .5s ease;

@@ -1,14 +1,21 @@
-# Kalyanam — an ivory & gold South Indian wedding invitation
+# Kalyanam — a blush-ivory & gold Indian wedding invitation
 
-A South Indian kalyana card brought to the web: warm ivory-cream paper,
-antique gold line-work, kumkum and rani-pink accents, a gold Ganesha
-above the names, a fresh marigold toran with brass bells across the
-cover, and the bride and groom beneath a mehrab arch. The cover is a
-pair of ivory-silk doors that part onto ten scenes — story, save the
-date, the celebrations, palette, garland, mandapam, countdown, RSVP
-and a closing note. Fully customisable in the browser with a guided,
-auto-saving visual editor — then published live with one click on
-Cloudflare.
+An elegant Indian kalyana card brought to the web, recreated from the
+reference invitation: a floating blush-ivory card inside a tall cusped
+gold mehrab arch, painterly watercolor ornaments breaking the frame at
+all four corners — blossom cascades and temple bells above, lotus,
+brass diyas and banana leaves below — with the names and every word
+centred. The hero follows the reference card exactly: a gold Ganesha
+in its niche, the shloka, "With the divine blessings of our families",
+the names in maroon Pinyon Script, an ornamental date row, the muhurat,
+the venue, and "Your presence will make our day complete". Every other
+scene — story letter, save the date, six mini event cards, palette,
+garland of festivities, mandapam, countdown, RSVP and a closing note
+with the couple — shares the same card language. The cover is a pair of
+ivory-silk doors beneath the mehrab that part onto ten scenes. Set in
+Rozha One, EB Garamond and Pinyon Script. Fully customisable in the
+browser with a guided, auto-saving visual editor — then published live
+with one click on Cloudflare.
 
 **Live template pieces**
 

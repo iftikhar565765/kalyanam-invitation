@@ -1,34 +1,34 @@
 /* ═══════════════════════════════════════════════════════════════
-   KALYANAM · variables.css — the ivory kalyana card
+   KALYANAM · variables.css — the blush-ivory mehrab card
    ---------------------------------------------------------------
-   Warm ivory-cream paper grounds, antique gold line-work, kumkum
-   and rani accents — the language of the South Indian wedding
-   card. Every token here is overwritten at runtime by main.js
-   applyTheme() from the editor's palettes, so the four moods
-   (marigold, rani, peacock, sindoor) recolour the whole suite.
-   These defaults mirror the marigold preset.
+   Blush-ivory paper grounds, antique gold line-work, deep maroon
+   ink and dusty rose accents — the language of the elegant Indian
+   wedding card, recreated from the reference. Every token here is
+   overwritten at runtime by main.js applyTheme() from the editor's
+   palettes, so the moods (blush, marigold, rani, peacock, sindoor)
+   recolour the whole suite. Defaults mirror the blush preset.
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
-  /* ── the kalyana palette (marigold mood) ──────────────────── */
-  --burgundy:      #A63A46;   /* kumkum red — primary accent    */
-  --burgundy-deep: #822D39;   /* pressed kumkum                 */
-  --wine:          #521A24;   /* deepest maroon — strong ink    */
-  --crimson:       #C4406E;   /* rani pink — haldi-fire accent  */
-  --champagne:     #B8862B;   /* metallic gold                  */
-  --champagne-soft:#96702A;   /* antique gold                   */
-  --parchment:     #FBF5E6;   /* warm light wash                */
-  --ivory:         #F8F1E0;   /* card ivory cream               */
-  --paper-raised:  #FFFBEF;   /* raised card paper              */
-  --night:         #43131C;   /* deep kumkum ground (menu/nav)  */
-  --night-deep:    #33101A;
-  --olive:         #4E6B4A;   /* banana-leaf green              */
-  --olive-deep:    #39513A;
-  --sage:          #8CA48B;
-  --rose:          #C97A94;   /* dusty rose                     */
-  --ink:           #40261A;   /* warm sepia ink on cream        */
-  --ink-soft:      #6E4A38;
-  --charcoal:      #96796A;
+  /* ── the kalyana palette (blush mood) ─────────────────────── */
+  --burgundy:      #7D2B3A;   /* deep maroon — primary accent   */
+  --burgundy-deep: #631F2C;   /* pressed maroon                 */
+  --wine:          #471522;   /* deepest maroon — strong ink    */
+  --crimson:       #C25E7C;   /* rose pink — blossom accent     */
+  --champagne:     #B6893C;   /* antique gold                   */
+  --champagne-soft:#8F6B2C;   /* burnished gold                 */
+  --parchment:     #F7EEE2;   /* warm light wash                */
+  --ivory:         #F3E3D3;   /* blush ivory page ground        */
+  --paper-raised:  #FBF3E8;   /* raised card paper              */
+  --night:         #3D1420;   /* deep maroon ground (menu/nav)  */
+  --night-deep:    #2E0E18;
+  --olive:         #5F7C4F;   /* banana-leaf green              */
+  --olive-deep:    #475F3B;
+  --sage:          #93A987;
+  --rose:          #E0A5B6;   /* dusty rose blossom             */
+  --ink:           #4E3524;   /* warm bronze ink on cream       */
+  --ink-soft:      #6E5138;
+  --charcoal:      #A18A76;
 
   /* ── derived golds ────────────────────────────────────────── */
   --gold:          var(--champagne);
@@ -43,14 +43,14 @@
   --paper-wash:    color-mix(in srgb, var(--burgundy) 4%, var(--paper-raised));
   --cream-deep:    color-mix(in srgb, var(--parchment) 62%, var(--ivory) 38%);
 
-  /* ── type ─────────────────────────────────────────────────── */
-  --font-editorial: 'Prata', serif;              /* display headings   */
-  --font-display:   'Cormorant Garamond', serif; /* romantic serif     */
-  --font-script:    'Great Vibes', cursive;      /* signatures         */
+  /* ── type — Rozha One · EB Garamond · Pinyon Script ───────── */
+  --font-editorial: 'Rozha One', serif;          /* display headings   */
+  --font-display:   'EB Garamond', serif;        /* romantic serif     */
+  --font-script:    'Pinyon Script', cursive;    /* signatures & names */
   --font-hand:      'Shadows Into Light', cursive;
   --font-body:      'Jost', sans-serif;          /* interface          */
   --font-deva:      'Tiro Devanagari Hindi', serif;
-  --font-caps:      'Marcellus SC', 'Marcellus', serif;
+  --font-caps:      'EB Garamond', serif;        /* spaced serif caps  */
 
   /* ── rhythm ───────────────────────────────────────────────── */
   --container:     1120px;
@@ -58,16 +58,16 @@
   --space-scene:   clamp(88px, 13vh, 156px);
 
   --radius-card:   4px;
-  --shadow-card:   0 2px 6px rgba(82, 48, 12, .14), 0 22px 44px -18px rgba(82, 48, 12, .30);
+  --shadow-card:   0 2px 6px rgba(93, 52, 22, .14), 0 22px 44px -18px rgba(93, 52, 22, .30);
   --shadow-gold:   0 1px 0 rgba(255, 248, 224, .6) inset;
 
   --ease-out:      cubic-bezier(.22, .61, .36, 1);
 }
 
 /* ── one paper system for every scene ───────────────────────────
-   The whole suite reads as a single ivory card, like the reference
-   invitations: alternating washes keep the rhythm without ever
-   breaking the paper.                                            */
+   The whole suite reads as one floating blush-ivory card inside a
+   gold mehrab, like the reference: alternating washes keep the
+   rhythm without ever breaking the paper.                        */
 .scene {
   --scene-bg: var(--ivory);
   --scene-bg-deep: var(--cream-deep);
