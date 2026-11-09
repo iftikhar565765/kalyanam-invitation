@@ -1,12 +1,13 @@
 /* ═══════════════════════════════════════════════════════════════
-   KALYANAM · variables.css — the blush-ivory mehrab card
+   KALYANAM · variables.css — the printed wedding card
    ---------------------------------------------------------------
-   Blush-ivory paper grounds, antique gold line-work, deep maroon
-   ink and dusty rose accents — the language of the elegant Indian
-   wedding card, recreated from the reference. Every token here is
-   overwritten at runtime by main.js applyTheme() from the editor's
-   palettes, so the moods (blush, marigold, rani, peacock, sindoor)
-   recolour the whole suite. Defaults mirror the blush preset.
+   Warm linen table, ivory-cream card paper, antique gold
+   line-work, deep maroon ink and dusty rose blossoms — the
+   language of the reference cards. Every token here is
+   overwritten at runtime by main.js applyTheme() from the
+   editor's palettes, so the moods (blush, marigold, rani,
+   peacock, sindoor) recolour the whole suite. Defaults mirror
+   the blush preset.
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
@@ -43,21 +44,22 @@
   --paper-wash:    color-mix(in srgb, var(--burgundy) 4%, var(--paper-raised));
   --cream-deep:    color-mix(in srgb, var(--parchment) 62%, var(--ivory) 38%);
 
-  /* ── type — Rozha One · EB Garamond · Pinyon Script ───────── */
-  --font-editorial: 'Rozha One', serif;          /* display headings   */
+  /* ── type — Cormorant Garamond · EB Garamond · Pinyon Script ── */
+  --font-editorial: 'Cormorant Garamond', serif;  /* display headings   */
   --font-display:   'EB Garamond', serif;        /* romantic serif     */
   --font-script:    'Pinyon Script', cursive;    /* signatures & names */
   --font-hand:      'Shadows Into Light', cursive;
-  --font-body:      'Jost', sans-serif;          /* interface          */
+  --font-body:      'EB Garamond', serif;        /* the printed word   */
+  --font-ui:        'Jost', sans-serif;          /* interface & labels */
   --font-deva:      'Tiro Devanagari Hindi', serif;
-  --font-caps:      'EB Garamond', serif;        /* spaced serif caps  */
+  --font-caps:      'Cormorant Garamond', serif; /* spaced serif caps  */
 
   /* ── rhythm ───────────────────────────────────────────────── */
-  --container:     1120px;
+  --container:     780px;
   --gutter:        clamp(20px, 4.5vw, 48px);
-  --space-scene:   clamp(88px, 13vh, 156px);
+  --space-scene:   clamp(64px, 9vh, 110px);
 
-  --radius-card:   4px;
+  --radius-card:   10px;
   --shadow-card:   0 2px 6px rgba(93, 52, 22, .14), 0 22px 44px -18px rgba(93, 52, 22, .30);
   --shadow-gold:   0 1px 0 rgba(255, 248, 224, .6) inset;
 

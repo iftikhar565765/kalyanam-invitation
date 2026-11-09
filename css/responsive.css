@@ -1,110 +1,55 @@
 /* ═══════════════════════════════════════════════════════════════
-   SHAADI · responsive.css — the card fits every hand
+   KALYANAM · responsive.css — the card at every size
    ═══════════════════════════════════════════════════════════════ */
 
-/* ── tablets ─────────────────────────────────────────────────── */
-@media (max-width: 1020px) {
-  .story-grid { grid-template-columns: 1fr; gap: 44px; }
-  .story-aside { max-width: 560px; }
-  .programme { grid-template-columns: repeat(2, 1fr); }
-  .particulars-row { grid-template-columns: repeat(2, 1fr); row-gap: 30px; }
-  .nav__links { display: none; }
-  .hero-mandala { right: -30vw; opacity: .08; }
+@media (max-width: 720px) {
+
+  .sheet { width: min(100% - 1.2rem, 780px); border-radius: 8px; }
+  .sheet__frame { inset: 10px; }
+  .sheet__frame::after { inset: 4px; }
+  .sheet__frame::before { inset: -2px; }
+
+  /* garlands hug the smaller card */
+  .hero-orn--cascade-tl,
+  .hero-orn--cascade-tr { top: -20px; left: -22px; width: 130px; }
+  .hero-orn--cascade-tr { left: auto; right: -22px; }
+  .hero-orn--bell-tl { left: 8%; }
+  .hero-orn--bell-tr { right: 8%; }
+  .hero-mandala { top: 240px; }
+
+  .hero-scene { height: clamp(300px, 96vw, 430px); }
+  .scene-orn--leaf-l,
+  .scene-orn--leaf-r { width: 42%; bottom: -2%; }
+  .scene-orn--mandap { width: 30%; right: 0; bottom: 12%; }
+  .scene-couple { width: min(62%, 240px); }
+  .scene-signboard { left: 0; top: 2%; width: 44%; }
+
+  .particulars-row { grid-template-columns: 1fr; gap: 22px; }
+
+  .std-actions { flex-direction: column; align-items: center; }
+  .std-actions .btn { width: min(260px, 100%); justify-content: center; }
+
+  .closing-bloom--l { left: -20px; }
+  .closing-bloom--r { right: -20px; }
 }
 
-/* ── the phone ───────────────────────────────────────────────── */
-@media (max-width: 640px) {
-  :root { --space-scene: clamp(72px, 11vh, 110px); }
+@media (max-width: 430px) {
 
-  /* the opening */
-  .opening__corner { width: 118px; opacity: .85; }
-  .opening__corner--tl { left: -16px; }
-  .opening__corner--tr { right: -16px; }
-  .opening__bell { width: 38px; }
-  .opening__watermark { font-size: 300px; }
-  .opening__inner { padding-top: 96px; }
-  .gate-stage { width: min(76vw, 292px); padding-top: 84px; }
-  .gates { height: min(112vw, 375px); }
-  .gate-pediment { width: min(74vw, 284px); }
-  .gate-crest { width: 84px; }
-  .gate-crest__initials { font-size: 1.35rem; }
-  .gate-threshold { bottom: -30px; width: 128%; }
-  .opening__hint { margin-top: 34px; letter-spacing: .24em; }
-  .opening__names { font-size: clamp(2.2rem, 10vw, 3rem); }
+  body { font-size: 16px; }
 
-  /* hero — the card fills the hand */
-  .hero-card { width: min(430px, calc(100% - 18px)); }
-  .hero-orn--cascade-tl, .hero-orn--cascade-tr { width: 96px; top: -18px; }
-  .hero-orn--cascade-tl { left: -26px; }
-  .hero-orn--cascade-tr { right: -26px; }
-  .hero-orn--bell-tl, .hero-orn--bell-tr { width: 30px; top: -10px; }
-  .hero-orn--leaf-bl, .hero-orn--leaf-br { width: 92px; bottom: -16px; }
-  .hero-orn--leaf-bl { left: -26px; }
-  .hero-orn--leaf-br { right: -26px; }
-  .hero-orn--diya-bl, .hero-orn--diya-br { width: 42px; bottom: -18px; }
-  .hero-orn--lotus-bl, .hero-orn--lotus-br { width: 74px; bottom: -12px; }
-  .hero-card__inner { padding: 64px 26px 74px; }
-  .hero-mandala { width: 150vw; right: -52vw; top: 160px; }
-  .hero-names { font-size: clamp(2.7rem, 12.5vw, 3.6rem); }
-  .hero-date-num { font-size: 2.7rem; }
-  .hero-venue-name { letter-spacing: .16em; }
-  .hero-scroll__line { height: 32px; }
+  .hero-orn--bell-tl,
+  .hero-orn--bell-tr { width: 40px; top: 64px; }
+  .hero-orn--cascade-tl,
+  .hero-orn--cascade-tr { width: 108px; top: -16px; }
+  .hero-inner { padding-top: 108px; }
 
-  /* story */
-  .story-lotus { width: 120px; margin-top: 8px; }
-  .story-quote { padding: 34px 24px 26px; }
-  .story-caption svg { width: 58px; }
+  .hero-scene { height: 108vw; }
+  .scene-couple { width: 68%; }
+  .scene-signboard { width: 52%; top: 0; }
+  .scene-signboard__text { font-size: 1.1rem; }
+  .scene-orn--mandap { width: 34%; bottom: 10%; }
 
-  /* events */
-  .programme { grid-template-columns: 1fr; gap: 18px; }
-  .programme-item { padding: 32px 22px 28px; max-width: 420px; width: 100%; margin-inline: auto; }
-  .particulars-row { grid-template-columns: 1fr; row-gap: 26px; }
+  .count-clock { flex-wrap: wrap; row-gap: 18px; }
 
-  /* palette + garland */
-  .palette-swatches { gap: 18px; }
-  .day-words { gap: 18px 22px; padding-inline: 4px; }
-  .day-word__text { font-size: .84rem; letter-spacing: .12em; }
-
-  /* venue */
-  .venue-mandap { width: min(72vw, 280px); }
-  .venue-diya { width: 120px; }
-
-  /* countdown */
-  .count-clock { flex-wrap: wrap; row-gap: 26px; }
-  .count-clock { display: grid; grid-template-columns: 1fr 1fr; justify-items: center; }
-  .count-unit { padding: 6px 18px; }
-  .count-unit:nth-child(3)::before { display: none; }
-  .countdown-wreath { width: 150vw; opacity: .12; }
-  .count-num { font-size: 2.5rem; }
-
-  /* rsvp */
-  .watermark-script { font-size: 4.6rem; }
-  .rsvp-card { padding: 36px 20px 32px; }
-  .choices { gap: 10px 20px; }
-
-  /* closing */
-  .closing-bloom { width: 110px; opacity: .9; }
-  .closing-couple { width: min(64vw, 240px); }
-  .closing-actions { flex-direction: column; align-items: stretch; max-width: 340px; margin-inline: auto; }
-}
-
-/* ── very small phones ───────────────────────────────────────── */
-@media (max-width: 380px) {
-  .hero-names { font-size: 2.2rem; }
-  .hero-card__inner { padding: 56px 20px 64px; }
-  .gate-stage { width: 86vw; }
-  .gates { height: 128vw; }
-  .programme-item { padding-inline: 16px; }
-}
-
-/* ── tall, narrow landscape (e.g. foldables open) ────────────── */
-@media (max-height: 560px) and (orientation: landscape) {
-  .opening__inner { padding-top: 84px; }
-  .opening__names { font-size: 1.9rem; margin-bottom: 8px; }
-  .gate-stage { padding-top: 58px; }
-  .gates { height: 195px; }
-  .gate-pediment { width: 205px; }
-  .opening__hint { margin-top: 20px; }
-  .opening__open { margin-top: 8px; min-height: 42px; }
-  .opening__skip { margin-top: 6px; }
+  .day-words { column-gap: 26px; }
 }

@@ -1,21 +1,23 @@
 # Kalyanam — a blush-ivory & gold Indian wedding invitation
 
-An elegant Indian kalyana card brought to the web, recreated from the
-reference invitation: a floating blush-ivory card inside a tall cusped
-gold mehrab arch, painterly watercolor ornaments breaking the frame at
-all four corners — blossom cascades and temple bells above, lotus,
-brass diyas and banana leaves below — with the names and every word
-centred. The hero follows the reference card exactly: a gold Ganesha
-in its niche, the shloka, "With the divine blessings of our families",
-the names in maroon Pinyon Script, an ornamental date row, the muhurat,
-the venue, and "Your presence will make our day complete". Every other
-scene — story letter, save the date, six mini event cards, palette,
-garland of festivities, mandapam, countdown, RSVP and a closing note
-with the couple — shares the same card language. The cover is a pair of
-ivory-silk doors beneath the mehrab that part onto ten scenes. Set in
-Rozha One, EB Garamond and Pinyon Script. Fully customisable in the
-browser with a guided, auto-saving visual editor — then published live
-with one click on Cloudflare.
+An elegant Indian kalyana card brought to the web, rebuilt from the
+reference invitations as **one continuous printed card**: a single
+ivory-cream sheet with a double gold rule, lying on warm linen — a
+marigold toran and hanging temple bells strung across its top edge,
+blossom cascades breaking the frame at the corners, a gold Ganesha in
+its niche, the shloka, "With the divine blessings of our families",
+the names in maroon Pinyon Script, an ornamental date row with the
+foil numerals, the muhurat, the venue and "Your presence will make
+our day complete" — and then, painted into the same sheet, the
+standing couple amid banana leaves, a carved mandap and a framed
+signboard. Below: their story as a centred letter, the engraved
+save-the-date plate, the six celebrations as a printed itinerary,
+the palette, the garland of festivities, the kalyana mandapam, the
+countdown beneath the mandala, the reply card, and a closing note
+sealed with the couple's monogram. No site chrome — it reads as the
+card itself. Set in Cormorant Garamond, EB Garamond and Pinyon
+Script. Fully customisable in the browser with a guided, auto-saving
+visual editor — then published live with one click on Cloudflare.
 
 **Live template pieces**
 
