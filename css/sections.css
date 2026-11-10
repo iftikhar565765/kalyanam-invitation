@@ -465,14 +465,13 @@
   font-size: 1.02rem;
   color: var(--ink-soft);
 }
-.story-caption svg { width: 30px; height: 30px; flex: none; opacity: .85; }
-.story-caption:nth-child(1) svg { stroke: var(--burgundy); }
-.story-caption:nth-child(2) svg { stroke: var(--champagne-soft); }
-.story-caption:nth-child(3) svg { stroke: var(--olive); }
-.story-caption:nth-child(1) svg .orn-line,
-.story-caption:nth-child(2) svg .orn-line,
-.story-caption:nth-child(3) svg .orn-line { stroke: currentColor; }
-.story-caption svg { color: inherit; }
+.story-caption svg { width: 30px; height: 30px; flex: none; opacity: .9; }
+.story-caption:nth-child(1) .orn-line { stroke: var(--burgundy); }
+.story-caption:nth-child(1) .orn-dot { fill: var(--burgundy); }
+.story-caption:nth-child(2) .orn-line { stroke: var(--champagne-soft); }
+.story-caption:nth-child(2) .orn-dot { fill: var(--champagne-soft); }
+.story-caption:nth-child(3) .orn-line { stroke: var(--olive); }
+.story-caption:nth-child(3) .orn-dot { fill: var(--olive); }
 
 /* ═══ Ⅲ · SAVE THE DATE ═════════════════════════════════════════ */
 
