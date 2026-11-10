@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════
    KALYANAM · rsvp.css — the reply-card form
-   Stamp-block fields on the reply card: thick ink borders,
-   marigold focus shadows, chunky choice pills.
+   Fine gold hairlines, blush fields, pill choices — a reply card
+   written with a fountain pen, not a stamp block.
    ═══════════════════════════════════════════════════════════════ */
 
 .rsvp-form {
@@ -11,14 +11,14 @@
   gap: 22px;
 }
 
-.field label,
+.field > label,
 .field-legend {
   display: block;
-  font-family: var(--font-ui);
-  font-weight: 700;
+  font-family: var(--font-caps);
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: .18em;
-  font-size: .66rem;
+  letter-spacing: .2em;
+  font-size: .64rem;
   color: var(--ink-soft);
   margin-bottom: 9px;
 }
@@ -31,10 +31,10 @@
   font-size: 1.04rem;
   color: var(--ink);
   background: var(--ivory);
-  border: 2px solid var(--ink);
-  border-radius: 0;
-  padding: .78em .95em;
-  transition: transform .16s var(--ease-out), box-shadow .16s var(--ease-out);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: .8em 1em;
+  transition: border-color .25s var(--ease-soft), box-shadow .25s var(--ease-soft);
   appearance: none;
 }
 .field textarea { resize: vertical; min-height: 64px; }
@@ -42,8 +42,8 @@
 .field input:focus,
 .field textarea:focus {
   outline: none;
-  transform: translate(-2px, -2px);
-  box-shadow: 4px 4px 0 var(--champagne);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--champagne) 18%, transparent);
 }
 
 .field-error {
@@ -56,7 +56,7 @@
 
 .field--split input[type="number"] { max-width: 160px; }
 
-/* ── the two choices — chunky pills ───────────────────────────── */
+/* ── the two choices — soft pills with a fine ring ────────────── */
 
 .choices {
   display: flex;
@@ -68,18 +68,24 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 11px;
-  padding: .72em 1.15em;
+  gap: 12px;
+  padding: .72em 1.25em;
   background: var(--ivory);
-  border: 2px solid var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
   font-family: var(--font-display);
   font-size: 1rem;
+  letter-spacing: .01em;
+  text-transform: none;
   color: var(--ink);
   cursor: pointer;
-  transition: transform .16s var(--ease-out), box-shadow .16s var(--ease-out),
-    background-color .16s var(--ease-out);
+  transition: border-color .25s var(--ease-soft), box-shadow .25s var(--ease-soft),
+    background-color .25s var(--ease-soft), color .25s var(--ease-soft);
 }
-.choice:hover { transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--ink); }
+.choice:hover {
+  border-color: var(--gold);
+  box-shadow: 0 6px 16px -10px color-mix(in srgb, var(--night) 45%, transparent);
+}
 
 .choice input {
   position: absolute;
@@ -88,22 +94,26 @@
 }
 
 .choice .diamond {
-  width: 13px;
-  height: 13px;
+  width: 12px;
+  height: 12px;
   flex: none;
   transform: rotate(45deg);
-  border: 2px solid var(--ink);
+  border: 1px solid var(--champagne-soft);
   background: transparent;
-  transition: background-color .16s var(--ease-out);
+  transition: background-color .25s var(--ease-soft), border-color .25s var(--ease-soft);
 }
 
 .choice:has(input:checked) {
-  background: var(--champagne);
-  box-shadow: 4px 4px 0 var(--ink);
+  background: color-mix(in srgb, var(--rose) 26%, var(--paper-raised));
+  border-color: var(--gold);
+  box-shadow: 0 8px 18px -12px color-mix(in srgb, var(--burgundy) 55%, transparent);
 }
-.choice:has(input:checked) .diamond { background: var(--burgundy); }
+.choice:has(input:checked) .diamond {
+  background: var(--burgundy);
+  border-color: var(--burgundy);
+}
 .choice:has(input:focus-visible) {
-  outline: 3px solid var(--champagne);
+  outline: 2px solid var(--gold);
   outline-offset: 2px;
 }
 
@@ -120,12 +130,13 @@
 
 .rsvp-note {
   font-family: var(--font-ui);
+  font-weight: 300;
   font-size: .78rem;
   line-height: 1.6;
   color: var(--ink-soft);
   max-width: 46ch;
 }
-.rsvp-note strong { color: var(--ink); }
+.rsvp-note strong { color: var(--ink); font-weight: 500; }
 
 .rsvp-status { font-family: var(--font-ui); font-size: .82rem; color: var(--olive-deep); }
 
@@ -151,22 +162,25 @@
   gap: 0;
   margin: 22px 0;
   text-align: left;
-  border: 2px solid var(--ink);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-card);
+  overflow: hidden;
 }
 .rsvp-summary > div {
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  padding: .7em 1em;
-  border-bottom: 2px solid color-mix(in srgb, var(--ink) 16%, transparent);
+  padding: .75em 1.1em;
+  border-bottom: 1px solid var(--paper-line);
 }
+.rsvp-summary > div:nth-child(odd) { background: color-mix(in srgb, var(--rose) 7%, transparent); }
 .rsvp-summary > div:last-child { border-bottom: 0; }
 .rsvp-summary dt {
-  font-family: var(--font-ui);
-  font-weight: 700;
+  font-family: var(--font-caps);
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: .14em;
-  font-size: .62rem;
+  letter-spacing: .16em;
+  font-size: .6rem;
   color: var(--ink-soft);
   align-self: center;
 }

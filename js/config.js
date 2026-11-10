@@ -74,7 +74,7 @@ window.HEIRLOOM = {
     menuCountdown: "The Countdown",
     menuClosing: "A Closing Note",
     openingEyebrow: "With the divine blessings of both families, you are invited to the wedding of",
-    openingHint: "Touch the ticket to open",
+    openingHint: "Touch the seal to open",
     openButton: "Enter the Celebration",
     skipButton: "Skip straight to the invitation",
     envelopeAddress: "their honoured guests",
@@ -136,7 +136,7 @@ window.HEIRLOOM = {
     paletteKicker: "The Colours of the Day",
     paletteTitleFirst: "The wedding",
     paletteTitleSecond: "palette",
-    paletteIntro: "Antique gold and deep maroon, rose blossom and banana-leaf green, bronze ink on blush ivory — the colours of our celebration.",
+    paletteIntro: "Rani pink flowing into baby blush, antique gold on ivory cream, candlelight on plum — the colours of our celebration.",
     dressCodeLabel: "Attire · Traditional Festive",
     dressCodeTitle: "Bright & joyous",
     dressCodeNote: "Kanjivaram sarees, silk dhotis and jewel tones are most welcome — dress as splendidly as you feel.",
@@ -183,21 +183,21 @@ window.HEIRLOOM = {
   },
 
   palette: [
-    { name: "Rani Pink",     color: "#D81E5B" },
-    { name: "Marigold",      color: "#F5A623" },
-    { name: "Temple Ink",    color: "#2A1015" },
-    { name: "Emerald",       color: "#1C6B4E" },
-    { name: "Kumkum",        color: "#8E0E30" },
-    { name: "Card Cream",    color: "#FBF3E2" }
+    { name: "Rani Pink",     color: "#A21D57" },
+    { name: "Rose Bloom",    color: "#DB6E95" },
+    { name: "Baby Blush",    color: "#F5C6D8" },
+    { name: "Antique Gold",  color: "#C9A260" },
+    { name: "Plum Wine",     color: "#55122D" },
+    { name: "Blush Ivory",   color: "#FDF6F5" }
   ],
   theme: "blush",
   themeColors: {},
   fonts: {
-    editorial: "yatraOne",
+    editorial: "cormorant",
     display: "ebGaramond",
     script: "pinyon",
-    hand: "shadowsIntoLight",
-    body: "spaceGrotesk"
+    hand: "laBelle",
+    body: "jost"
   },
 
   /* ── Wedding festivities — SAMPLE words for the garland.

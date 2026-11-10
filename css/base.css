@@ -1,12 +1,12 @@
 /* ═══════════════════════════════════════════════════════════════
-   KALYANAM · base.css — brutalist maximalist Indian
+   KALYANAM · base.css — the rose kalyanam
    ---------------------------------------------------------------
-   Full-bleed bands of flat colour, thick ink borders, hard
-   offset shadows, sticker labels and stamp typography — the
-   language of hand-painted Indian signage and block-print
-   textiles, laid on a strict centred grid so the maximalism
-   always reads clean. All colours are tokens overwritten at
-   runtime by main.js applyTheme().
+   Luxurious blush stationery: soft paper grounds, antique gold
+   hairlines, elegant serif headings with script accents, refined
+   letter-spaced labels and pill buttons with soft layered
+   shadows. Everything sits on a calm centred grid so the
+   ornamentation always reads gracious, never busy. All colours
+   are tokens overwritten at runtime by main.js applyTheme().
    ═══════════════════════════════════════════════════════════════ */
 
 *,
@@ -27,7 +27,8 @@ body {
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 17px;
-  line-height: 1.6;
+  font-weight: 300;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -40,14 +41,14 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 a { color: inherit; }
 
 :focus-visible {
-  outline: 3px solid var(--champagne);
+  outline: 2px solid var(--gold);
   outline-offset: 3px;
-  border-radius: 0;
+  border-radius: 2px;
 }
 
-::selection { background: color-mix(in srgb, var(--crimson) 40%, transparent); }
+::selection { background: color-mix(in srgb, var(--crimson) 32%, transparent); }
 
-/* ═══ THE DECK — the whole invitation ═══════════════════════════ */
+/* ═══ THE SUITE — the whole invitation ══════════════════════════ */
 
 .sheet {
   position: relative;
@@ -62,78 +63,85 @@ a { color: inherit; }
 
 .label-caps {
   font-family: var(--font-caps);
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: .22em;
-  font-size: .72rem;
+  letter-spacing: .26em;
+  font-size: .7rem;
   color: var(--champagne-soft);
 }
 
+/* the eyebrow — letter-spaced caps flanked by gold hairlines */
 .kicker {
-  display: inline-block;
-  font-family: var(--font-ui);
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-caps);
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: .3em;
-  font-size: .64rem;
-  color: var(--paper-raised);
-  background: var(--burgundy);
-  border: 2px solid var(--ink);
-  box-shadow: var(--shadow-hard-sm);
-  padding: .5em 1.2em .45em 1.35em;
-  transform: rotate(-1.2deg);
+  letter-spacing: .34em;
+  font-size: var(--fs-eyebrow);
+  color: var(--champagne-soft);
+  padding-inline: 4px;
+  text-indent: .34em; /* optical balance for the tracking */
+}
+.kicker::before,
+.kicker::after {
+  content: "";
+  width: 44px;
+  height: 1px;
+  flex: none;
+  background: linear-gradient(90deg, transparent, var(--gold-line) 30%, var(--gold-line) 70%, transparent);
 }
 .kicker--center { margin-inline: auto; }
-.kicker--ink {
-  color: var(--paper-raised);
-  background: var(--ink);
-  box-shadow: 4px 4px 0 var(--champagne);
+.kicker--ink { color: var(--burgundy); }
+.kicker--ink::before,
+.kicker--ink::after {
+  background: linear-gradient(90deg, transparent, var(--line-strong) 30%, var(--line-strong) 70%, transparent);
 }
 
 .display {
   font-family: var(--font-editorial);
   font-weight: 400;
   font-size: clamp(2.3rem, 6vw, 3.6rem);
-  line-height: 1.08;
+  line-height: 1.12;
   color: var(--ink);
   letter-spacing: .01em;
-  text-shadow: 3px 3px 0 color-mix(in srgb, var(--champagne) 55%, transparent);
 }
 .display .script {
-  font-size: 1.05em;
+  font-size: 1.06em;
   font-weight: 400;
   color: var(--burgundy);
-  text-shadow: none;
 }
 
 .prose {
   font-family: var(--font-display);
-  font-size: 1.08rem;
-  line-height: 1.78;
+  font-size: 1.09rem;
+  line-height: 1.82;
   color: var(--ink);
 }
 
 .prose--dropcap::first-letter {
   font-family: var(--font-editorial);
-  font-size: 3.2em;
-  line-height: .74;
+  font-weight: 500;
+  font-size: 3.4em;
+  line-height: .72;
   float: left;
-  padding: .06em .14em 0 0;
+  padding: .08em .16em 0 0;
   color: var(--burgundy);
 }
 
 .hand {
   font-family: var(--font-hand);
-  font-size: 1.18rem;
+  font-size: 1.16rem;
   color: var(--ink-soft);
 }
 
 .foil {
-  background: linear-gradient(175deg,
-    color-mix(in srgb, var(--champagne) 58%, #F6C55C) 12%,
-    color-mix(in srgb, var(--champagne) 82%, #FBE29A) 34%,
-    var(--champagne) 58%,
-    color-mix(in srgb, var(--champagne-soft) 72%, #A9762B) 88%);
+  background: linear-gradient(172deg,
+    color-mix(in srgb, var(--champagne) 58%, #F2DCA8) 10%,
+    color-mix(in srgb, var(--champagne) 80%, #FBEBC6) 34%,
+    var(--champagne) 56%,
+    color-mix(in srgb, var(--champagne-soft) 72%, #96703A) 88%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -141,98 +149,116 @@ a { color: inherit; }
 
 .small { font-size: .8rem; color: var(--charcoal); }
 
-/* ═══ BUTTONS — stamp blocks: thick border, hard shadow, press ══ */
+/* ═══ BUTTONS — quiet luxury: pill, hairline, soft lift ═════════ */
 
 .btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: .55rem;
-  padding: .78rem 1.5rem;
-  border-radius: 0;
-  border: var(--line-w) solid var(--line);
+  justify-content: center;
+  gap: .6rem;
+  padding: .9rem 1.9rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
   font-family: var(--font-ui);
-  font-size: .74rem;
-  font-weight: 700;
-  letter-spacing: .16em;
+  font-size: .72rem;
+  font-weight: 400;
+  letter-spacing: .22em;
   text-transform: uppercase;
   text-decoration: none;
-  box-shadow: var(--shadow-hard-sm);
-  transition: transform .16s var(--ease-out), box-shadow .16s var(--ease-out),
-    background-color .16s var(--ease-out), color .16s var(--ease-out);
+  background: transparent;
+  box-shadow: none;
+  transition: transform .25s var(--ease-soft), box-shadow .25s var(--ease-soft),
+    background-color .25s var(--ease-soft), color .25s var(--ease-soft),
+    border-color .25s var(--ease-soft);
 }
-.btn:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--ink); }
-.btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--ink); }
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+.btn:active { transform: translateY(0); box-shadow: none; }
 .btn .icon {
   width: 15px;
   height: 15px;
   fill: none;
   stroke: currentColor;
-  stroke-width: 2;
+  stroke-width: 1.6;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .btn--rani {
   color: var(--paper-raised);
-  background: var(--burgundy);
+  background: linear-gradient(160deg,
+    color-mix(in srgb, var(--burgundy) 88%, white 12%) 0%,
+    var(--burgundy) 44%,
+    var(--burgundy-deep) 100%);
+  border-color: transparent;
+  box-shadow: 0 14px 30px -14px color-mix(in srgb, var(--burgundy) 65%, transparent);
 }
+.btn--rani:hover { box-shadow: 0 20px 40px -16px color-mix(in srgb, var(--burgundy) 72%, transparent); }
+
 .btn--marigold {
-  color: var(--ink);
-  background: var(--champagne);
+  color: var(--night);
+  background: linear-gradient(160deg,
+    color-mix(in srgb, var(--champagne) 72%, #F2DCA8) 0%,
+    var(--champagne) 52%,
+    var(--champagne-soft) 100%);
+  border-color: transparent;
+  box-shadow: 0 14px 30px -14px color-mix(in srgb, var(--champagne-soft) 65%, transparent);
 }
+.btn--marigold:hover { box-shadow: 0 20px 40px -16px color-mix(in srgb, var(--champagne-soft) 72%, transparent); }
+
 .btn--ghost {
   color: inherit;
-  border-color: currentColor;
-  box-shadow: 4px 4px 0 color-mix(in srgb, currentColor 34%, transparent);
+  border-color: color-mix(in srgb, currentColor 42%, transparent);
+  background: transparent;
 }
+.btn--ghost:hover { border-color: currentColor; }
 .btn--ghost.btn--ink { color: var(--ink); }
 
 /* ═══ SHARED ORNAMENT STROKES ═══════════════════════════════════ */
 
-.orn-line { stroke: var(--champagne-soft); fill: none; stroke-width: 2; }
-.orn-line--thin { stroke-width: 1.2; }
-.rule { stroke: var(--paper-line); fill: none; stroke-width: 1.4; }
+.orn-line { stroke: var(--champagne-soft); fill: none; stroke-width: 1.6; }
+.orn-line--thin { stroke-width: 1; }
+.rule { stroke: var(--paper-line); fill: none; stroke-width: 1; }
 .dot-gold { fill: var(--champagne-soft); }
 .orn-dot { fill: var(--champagne-soft); }
 .petal { fill: color-mix(in srgb, var(--rose) 60%, transparent); }
-.arch-main { stroke: var(--champagne); fill: none; stroke-width: 1.6; }
-.arch-thin { stroke: var(--gold-line); fill: none; stroke-width: 1; }
-.arch-halo { fill: none; stroke: var(--gold-faint); stroke-width: 1.4; }
-.emblem-arc { stroke: var(--gold-line); fill: none; stroke-width: 1.2; }
+.arch-main { stroke: var(--champagne); fill: none; stroke-width: 1.4; }
+.arch-thin { stroke: var(--gold-line); fill: none; stroke-width: .9; }
+.arch-halo { fill: none; stroke: var(--gold-faint); stroke-width: 1.2; }
+.emblem-arc { stroke: var(--gold-line); fill: none; stroke-width: 1; }
 
-/* ═══ THE STRIPE BAND — temple bunting between scenes ══════════ */
-
+/* the quiet gold divider between scenes */
 .stripe-band {
   display: block;
-  height: 14px;
-  border-block: var(--line-w) solid var(--line);
-  background: repeating-linear-gradient(-45deg,
-    var(--burgundy) 0 26px,
-    var(--champagne) 26px 52px,
-    var(--paper-raised) 52px 62px,
-    var(--olive) 62px 88px,
-    var(--champagne) 88px 100px);
+  height: 1px;
+  border: 0;
+  background: linear-gradient(90deg, transparent, var(--gold-line) 18%, var(--gold-line) 82%, transparent);
 }
 
 /* ═══ FLOATING AUDIO — the only piece of "chrome" allowed ═══════ */
 
 .audio-float {
   position: fixed;
-  right: 14px;
-  bottom: 14px;
+  right: 16px;
+  bottom: 16px;
   z-index: 60;
   width: 44px;
   height: 44px;
-  border-radius: 0;
-  border: var(--line-w) solid var(--line);
-  background: var(--paper-raised);
-  box-shadow: var(--shadow-hard-sm);
-  color: var(--champagne-soft);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--glass-edge);
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-soft);
+  color: var(--gilding);
   display: grid;
   place-items: center;
-  transition: transform .16s var(--ease-out);
+  transition: transform .25s var(--ease-soft), box-shadow .25s var(--ease-soft);
 }
-.audio-float:hover { transform: translate(-1px, -1px); }
+.audio-float:hover { transform: translateY(-1px); box-shadow: var(--shadow-lift); }
 .audio-float .icon { width: 18px; height: 18px; }
 .audio-float[hidden] { display: none; }
 
@@ -240,15 +266,15 @@ a { color: inherit; }
 
 .reveal {
   opacity: 0;
-  transform: translateY(26px);
+  transform: translateY(22px);
   transition:
-    opacity .85s ease,
-    transform .85s var(--ease-out);
+    opacity .9s ease,
+    transform .9s var(--ease-soft);
 }
 .reveal.in-view { opacity: 1; transform: none; }
 .no-js .reveal { opacity: 1; transform: none; }
 
-/* while the ticket is sealed the suite waits behind the cover */
+/* while the envelope is sealed the suite waits behind the cover */
 body.intro-pending { overflow: hidden; height: 100dvh; }
 body.intro-pending #main-content { opacity: 0; pointer-events: none; }
 

@@ -237,12 +237,11 @@
   /* Removable & recolourable pieces of the suite — keyed in HTML
      via data-element-key and hidden through config.hiddenElements. */
   var elementLabels = {
-    'opening-tiles': 'The rangoli corner tiles',
-    'opening-ticker': 'The marquee ticker',
-    'opening-glow': 'Diya glow',
+    'opening-tiles': 'The corner blossoms',
+    'opening-glow': 'Candle glow',
     'opening-eyebrow': 'Opening introduction',
     'opening-names': 'Opening names',
-    'envelope-shadow': 'Ticket shadow',
+    'envelope-shadow': 'Envelope shadow',
     'gate-crest-art': 'The gold-foil medallion',
     'opening-hint': 'Invitation hint',
     'open-button': 'Open button',
@@ -260,7 +259,7 @@
     'hero-jasmine-l': 'Blossom strand · left',
     'hero-jasmine-r': 'Blossom strand · right',
     'hero-pavilion': 'The temple pavilion',
-    'hero-drape': 'The silk drape',
+    'hero-drape': 'The peacock',
     'hero-leaf-bl': 'Banana leaves · bottom left',
     'hero-leaf-br': 'Banana leaves · bottom right',
     'hero-diya-bl': 'Brass diya · bottom left',
@@ -650,11 +649,11 @@
   });
 
   var themePresets = {
-    /* moods of the kalyana card — blush-ivory grounds, antique gold
-       line-work, deep maroon ink and dusty rose accents, the language
-       of the elegant Indian wedding card. Night tones appear only in
-       the menu & nav glass.                                          */
-    blush:    { burgundy: '#B5123F', deep: '#8E0E30', wine: '#56091F', crimson: '#E24B7A', champagne: '#E8A020', soft: '#B97F12', parchment: '#F7EDDA', ivory: '#FBF3E2', paper: '#FFF9EC', night: '#2A1015', nightDeep: '#1E090E', olive: '#1C6B4E', oliveDeep: '#0F5238', sage: '#7FA98F', rose: '#F0A9C0', ink: '#2B1512', inkSoft: '#5C3A2E', charcoal: '#9C8266' },
+    /* moods of the kalyana card — blush-rose grounds, antique gold
+       hairlines, plum-wine ink and baby-blush accents, the language
+       of the luxurious Indian wedding card. Night tones appear in
+       the candlelit interludes & the opening.                       */
+    blush:    { burgundy: '#A21D57', deep: '#7E1140', wine: '#55122D', crimson: '#DB6E95', champagne: '#C9A260', soft: '#AD8445', parchment: '#FAEDEF', ivory: '#FDF6F5', paper: '#FFFBFA', night: '#2E0F1F', nightDeep: '#1E0714', olive: '#8C5C6A', oliveDeep: '#6F4552', sage: '#BE96A3', rose: '#F5C6D8', ink: '#3A1626', inkSoft: '#724A5C', charcoal: '#B092A0' },
     marigold: { burgundy: '#C2410F', deep: '#9A3009', wine: '#5C1B06', crimson: '#E06A2B', champagne: '#F2A007', soft: '#BC7A08', parchment: '#FBF2DC', ivory: '#FCF4E0', paper: '#FFFBEE', night: '#33150A', nightDeep: '#240D05', olive: '#4E6B2A', oliveDeep: '#39511B', sage: '#A0A97B', rose: '#E89A56', ink: '#33200F', inkSoft: '#6E4A22', charcoal: '#A68B68' },
     rani:     { burgundy: '#D81E5B', deep: '#AC1046', wine: '#6E0930', crimson: '#F0558B', champagne: '#F2A007', soft: '#BC7A08', parchment: '#FDF0E4', ivory: '#FDF2E9', paper: '#FFF9F1', night: '#38091F', nightDeep: '#280515', olive: '#8E2A5C', oliveDeep: '#6E1C45', sage: '#B07F97', rose: '#F585AC', ink: '#33101F', inkSoft: '#70304B', charcoal: '#A67A8C' },
     peacock:  { burgundy: '#0F6B4A', deep: '#0A5238', wine: '#063122', crimson: '#2E9A6E', champagne: '#E8A020', soft: '#B97F12', parchment: '#EDF6EA', ivory: '#F1F8EE', paper: '#FAFEF7', night: '#0A2418', nightDeep: '#051810', olive: '#1C6B4E', oliveDeep: '#0F5238', sage: '#7FA98F', rose: '#68C29A', ink: '#0E2A1E', inkSoft: '#2E5C46', charcoal: '#6E9682' },
