@@ -242,7 +242,12 @@
     'opening-eyebrow': 'Opening introduction',
     'opening-names': 'Opening names',
     'envelope-shadow': 'Envelope shadow',
-    'gate-crest-art': 'The gold-foil medallion',
+    'envelope-lace': 'The golden toran lace',
+    'envelope-letter': 'The letter inside',
+    'envelope-flap': 'The silk flap',
+    'envelope-stamps': 'The postage stamp',
+    'envelope-seal': 'The gold-foil medallion',
+    'envelope-address': 'The address plate',
     'opening-hint': 'Invitation hint',
     'open-button': 'Open button',
     'hero-card': 'The stage frame',
@@ -467,7 +472,7 @@
       /* decorative pieces ignore pointer events on the guest page —
          the editor needs to reach them for recolour & removal      */
       '.opening__florals,.opening__glow,.opening__watermark,' +
-      '.envelope__seal-wrap,.envelope__stamp,.envelope__band,.invitation-bloom,' +
+      '.envelope__seal-wrap,.envelope__stamps,.envelope__letter,.invitation-bloom,' +
       '.story-swag,.fc-quote__bloom,.story-keepsake,.std-candles,.std-glow,' +
       '.details-art__arch,.venue-lights,.closing-swag,.countdown-wreath{' +
         'pointer-events:auto!important;' +
@@ -564,8 +569,8 @@
       /* card faces paint over their keyed wrappers — select the
          face itself for recolouring; Remove targets the keyed
          parent (passed as removeKey) so the whole piece comes away */
-      var cardFace = event.target.closest('.envelope__card-frame, .envelope__card-inner, ' +
-        '.envelope__card, .envelope__band');
+      var cardFace = event.target.closest('.envelope__pocket, .envelope__back, ' +
+        '.envelope__flap-face, .envelope__flap-liner, .envelope__letter-inner');
       if (cardFace) {
         event.preventDefault();
         event.stopPropagation();
