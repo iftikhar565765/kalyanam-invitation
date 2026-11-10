@@ -1098,13 +1098,24 @@
 
 .closing-bloom {
   position: absolute;
-  top: -10px;
-  width: clamp(150px, 26%, 300px);
-  opacity: .8;
+  top: 0;
+  z-index: 0;
+  width: clamp(140px, 16vw, 240px);
+  opacity: .94;
+  filter: drop-shadow(0 12px 24px rgba(10, 2, 7, .55));
   pointer-events: none;
 }
-.closing-bloom--l { left: -30px; }
-.closing-bloom--r { right: -30px; transform: scaleX(-1); }
+.closing-bloom--l { left: 0; }
+.closing-bloom--r { right: 0; }
+/* the right spray is mirrored — carried through every state of the
+   reveal so `.reveal.in-view { transform: none }` cannot wipe the flip */
+.closing-bloom--r.reveal { transform: scaleX(-1) translateY(22px); }
+.closing-bloom--r.reveal.in-view,
+.no-js .closing-bloom--r.reveal { transform: scaleX(-1); }
+@media (prefers-reduced-motion: reduce) {
+  .closing-bloom--r.reveal { transform: scaleX(-1); }
+}
+.scene--closing .scene-body { position: relative; z-index: 1; }
 
 .closing-script {
   font-family: var(--font-script);

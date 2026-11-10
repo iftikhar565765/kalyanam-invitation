@@ -32,9 +32,6 @@
   .count-unit { width: 92px; padding: 15px 6px 12px; }
   .count-num { font-size: 2.1rem; }
 
-  .closing-bloom--l { left: -18px; }
-  .closing-bloom--r { right: -18px; }
-
   .day-words { gap: 24px 26px; }
 
   .opening__florals--tl,
@@ -82,7 +79,7 @@
 
   .day-words { column-gap: 22px; }
 
-  .closing-bloom { width: 120px; }
+  .closing-bloom { width: 116px; }
 
   .opening__eyebrow { font-size: .6rem; }
   .opening__florals--tl { width: 8rem; top: -2rem; left: -1.8rem; }
