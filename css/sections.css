@@ -549,81 +549,175 @@
 .seal__art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
 .seal__initials { position: relative; font-size: 1.3rem; color: var(--wine); }
 
-/* ═══ Ⅳ · THE CELEBRATIONS — gracious event cards ═══════════════ */
+/* ═══ Ⅳ · THE CELEBRATIONS — arch-niche festivity panels ═════════
+   Each event is a small die-cut panel of the invitation card:
+   a cusped mehrab niche crowns the ornament, the numeral is a
+   gold seal straddling the top edge, the date sits in a fine
+   ledger band, and a gold foot closes the card. */
 
 .programme {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
-  gap: 34px 26px;
-  max-width: 940px;
-  margin: 54px auto 0;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 800px;
+  margin: 56px auto 0;
   padding-inline: clamp(20px, 5vw, 44px);
+}
+@media (min-width: 761px) {
+  .programme { grid-template-columns: repeat(2, 1fr); gap: 46px 30px; }
+  /* the right column rides low — an editorial cascade */
+  .programme-item:nth-child(even) { margin-top: 34px; }
 }
 
 .programme-item {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: var(--paper-raised);
   border: 1px solid var(--line-strong);
   box-shadow: var(--shadow-soft);
   border-radius: var(--radius-card);
-  padding: 52px 26px 30px;
+  padding: 0 26px 24px;
   text-align: center;
-  transition: transform .3s var(--ease-soft), box-shadow .3s var(--ease-soft);
+  transition: opacity .9s ease, transform .3s var(--ease-soft), box-shadow .3s var(--ease-soft),
+    border-color .3s var(--ease-soft);
+}
+/* a blush dawn wash gathering behind the niche */
+.programme-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(92px 48px at 50% 78px, color-mix(in srgb, var(--rose) 15%, transparent), transparent 76%),
+    linear-gradient(180deg, color-mix(in srgb, var(--rose) 7%, transparent), transparent 40%);
+  pointer-events: none;
+}
+/* the fine inner frame — double-frame stationery */
+.programme-item::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid var(--gold-ghost);
+  pointer-events: none;
 }
 .programme-item:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-lift);
+  border-color: color-mix(in srgb, var(--champagne) 58%, transparent);
 }
 
-/* the roman numeral, set in a fine gold ring */
+/* even panels carry a deeper blush ground */
+.programme-item:nth-child(even) {
+  background: color-mix(in srgb, var(--rose) 9%, var(--paper-raised));
+}
+
+/* the numeral — a gold seal straddling the top edge */
 .programme-index {
   position: absolute;
-  top: 26px;
+  z-index: 2;
+  top: -20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
   font-family: var(--font-editorial);
-  font-size: .95rem;
+  font-size: .98rem;
   font-weight: 500;
   color: var(--burgundy);
   border: 1px solid var(--line-strong);
   border-radius: 50%;
-  background: color-mix(in srgb, var(--champagne) 8%, var(--paper-raised));
+  background: var(--paper-raised);
+}
+.programme-item:nth-child(even) .programme-index {
+  background: color-mix(in srgb, var(--rose) 14%, var(--paper-raised));
 }
 
-.programme-orn { width: 40px; margin-top: 26px; }
+/* ── the mehrab niche crowning each panel ─────────────────────── */
+
+.programme-niche {
+  position: relative;
+  flex: none;
+  width: 120px;
+  height: 88px;
+  margin-top: 36px;
+}
+.programme-arch { position: absolute; inset: 0; width: 100%; height: 100%; }
+.parch-wash { fill: color-mix(in srgb, var(--rose) 13%, transparent); stroke: none; }
+.parch-line { fill: none; stroke: var(--gold-line); stroke-width: 1.1; }
+.parch-line--inner { stroke: var(--gold-ghost); stroke-width: .9; }
+.parch-finial { fill: none; stroke: var(--champagne-soft); stroke-width: 1.1; stroke-linejoin: round; }
+.parch-bead { fill: var(--gold-line); stroke: none; }
+.parch-diamond { fill: none; stroke: var(--champagne-soft); stroke-width: 1.1; }
+
+.programme-orn {
+  position: absolute;
+  left: 50%;
+  top: 42px;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
+}
 .programme-orn .orn-line { stroke: var(--champagne-soft); }
 .programme-orn .orn-dot { fill: var(--champagne-soft); }
 
 .programme-name {
-  margin-top: 12px;
+  margin-top: 14px;
   font-family: var(--font-editorial);
   font-weight: 500;
-  font-size: 1.58rem;
+  font-size: 1.52rem;
   line-height: 1.2;
   color: var(--ink);
 }
 
+/* the date — a fine ledger band */
 .programme-value {
-  margin-top: 10px;
+  margin-top: 13px;
+  max-width: 100%;
+  padding: 7px 16px;
+  border-top: 1px solid var(--gold-ghost);
+  border-bottom: 1px solid var(--gold-ghost);
   font-family: var(--font-caps);
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: .2em;
-  font-size: .64rem;
+  font-size: .62rem;
+  line-height: 2;
   color: var(--burgundy);
 }
 
 .programme-note {
-  margin-top: 10px;
+  margin-top: 12px;
   font-family: var(--font-display);
+  font-style: italic;
   font-size: .98rem;
   line-height: 1.62;
   color: var(--ink-soft);
+}
+
+/* the gold foot that closes every panel */
+.programme-foot {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+  padding-top: 20px;
+}
+.programme-foot i {
+  width: 34px;
+  height: 1px;
+}
+.programme-foot i:first-of-type { background: linear-gradient(90deg, transparent, var(--gold-line)); }
+.programme-foot i:last-of-type  { background: linear-gradient(270deg, transparent, var(--gold-line)); }
+.programme-foot b {
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+  border: 1px solid var(--champagne-soft);
 }
 
 /* ── the particulars — a fine gold ledger ─────────────────────── */

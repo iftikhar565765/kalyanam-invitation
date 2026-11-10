@@ -84,7 +84,6 @@
 }
 .choice:hover {
   border-color: var(--gold);
-  box-shadow: 0 6px 16px -10px color-mix(in srgb, var(--night) 45%, transparent);
 }
 
 .choice input {
@@ -106,7 +105,6 @@
 .choice:has(input:checked) {
   background: color-mix(in srgb, var(--rose) 26%, var(--paper-raised));
   border-color: var(--gold);
-  box-shadow: 0 8px 18px -12px color-mix(in srgb, var(--burgundy) 55%, transparent);
 }
 .choice:has(input:checked) .diamond {
   background: var(--burgundy);

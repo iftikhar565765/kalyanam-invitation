@@ -66,8 +66,10 @@
 
   .hero-scroll__block { font-size: .54rem; }
 
-  .programme { gap: 28px 20px; }
-  .programme-item { padding: 50px 16px 24px; }
+  .programme { gap: 30px; }
+  .programme-item { padding: 0 18px 20px; }
+  .programme-index { top: -18px; width: 36px; height: 36px; }
+  .programme-value { letter-spacing: .16em; }
 
   .dresscode-lotus { width: 60px; top: -26px; left: -14px; }
 
